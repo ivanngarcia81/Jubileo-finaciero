@@ -10,12 +10,22 @@ Sitio web estático (HTML, CSS y JavaScript vanilla, sin frameworks ni build too
 ├── servicios.html              # Servicios, precios y botones de Acuity
 ├── blog.html                   # Índice del blog
 ├── contacto.html               # Formulario (Formspree) + iframe de Acuity + datos
+├── herramientas.html           # Índice de herramientas gratuitas
 ├── blog/
 │   ├── comportamiento-y-deudas.html
 │   ├── presupuesto-base-cero.html
 │   └── perspectiva-biblica-del-dinero.html
+├── herramientas/
+│   ├── diagnostico.html        # Quiz: ¿en qué Baby Step estás?
+│   ├── reto-30-dias.html       # Tracker del reto sin gastos hormiga
+│   ├── remesas.html            # Planificador de remesas inteligente
+│   └── credito.html            # Guía: el crédito no mide tu éxito
 ├── css/styles.css              # Todos los estilos (paleta, componentes, responsive)
-├── js/main.js                  # Menú hamburguesa y año del footer
+├── js/
+│   ├── main.js                 # Menú hamburguesa y año del footer
+│   ├── diagnostico.js          # Lógica del quiz de diagnóstico
+│   ├── reto.js                 # Tracker de 30 días (guarda en localStorage)
+│   └── remesas.js              # Cálculos del planificador de remesas
 └── README.md
 ```
 
@@ -42,6 +52,8 @@ Los tres montos son de ejemplo: `$99`, `$449` y `$799`. Edita las líneas con la
    Reemplaza `owner=XXXX` con tu ID de cuenta y `appointmentType=...` con el ID numérico real de cada tipo de cita. En Acuity: **Scheduling Page Link → Direct links & embedding → Appointment type links**.
 
 2. **Iframe del calendario** (`contacto.html`, sección `#agendar`): reemplaza `owner=XXXX` en el atributo `src` del `<iframe>` con tu ID de cuenta. El pago se procesa dentro de Acuity; el sitio no necesita lógica de pago propia.
+
+3. **Botón del resultado del quiz** (`herramientas/diagnostico.html`): el botón "Agenda tu sesión de coaching" apunta al placeholder `#ACUITY_URL`. Reemplázalo con tu enlace directo de Acuity (o con `../contacto.html#agendar` si prefieres llevar al usuario a la página de contacto).
 
 ### Formspree (contacto.html)
 

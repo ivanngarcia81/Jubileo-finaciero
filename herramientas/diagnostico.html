@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico Financiero en 3 minutos — Jubileo Financiero</title>
+  <meta name="description" content="Responde 9 preguntas y descubre en qué Baby Step estás, qué significa tu etapa y cuáles son tus próximos 3 pasos concretos hacia la libertad financiera.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Diagnóstico Financiero en 3 minutos — Jubileo Financiero">
+  <meta property="og:description" content="Descubre en qué Baby Step estás y cuáles son tus próximos 3 pasos concretos.">
+  <meta property="og:url" content="https://www.jubileofinanciero.com/herramientas/diagnostico.html">
+  <meta property="og:locale" content="es_LA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="pagina">
+
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="contenedor header__inner">
+      <a class="logo" href="../index.html" aria-label="Jubileo Financiero — Inicio">
+        <svg class="logo__icono" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="#0C0F10" stroke-width="2"/>
+          <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        Jubileo Financiero
+      </a>
+      <button class="hamburguesa" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú de navegación">
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+      </button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="../index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="../servicios.html">Servicios</a></li>
+          <li><a class="nav__enlace" href="../herramientas.html" aria-current="page">Herramientas</a></li>
+          <li><a class="nav__enlace" href="../blog.html">Blog</a></li>
+          <li><a class="nav__enlace" href="../contacto.html">Contacto</a></li>
+          <li class="nav__cta"><a class="boton boton--primario" href="../contacto.html#agendar">Agenda tu sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero">
+      <div class="contenedor">
+        <span class="etiqueta etiqueta--teal">Herramientas · Quiz</span>
+        <h1>Diagnóstico Financiero en <span class="hero__destacado">3 minutos</span></h1>
+        <p class="hero__texto">Nueve preguntas rápidas, sin registro y sin correo. Al final sabrás en qué Baby Step estás y qué hacer a continuación.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="quiz">
+
+          <!-- Vista del quiz -->
+          <div id="quiz-activo">
+            <div class="quiz__progreso" role="progressbar" aria-label="Progreso del diagnóstico" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0" id="quiz-progreso">
+              <div class="quiz__progreso-barra" id="quiz-barra"></div>
+            </div>
+            <p class="quiz__progreso-texto" id="quiz-contador">Pregunta 1 de 9</p>
+
+            <form id="quiz-formulario" class="tarjeta" novalidate>
+              <fieldset id="quiz-fieldset">
+                <legend id="quiz-pregunta">Cargando…</legend>
+                <div id="quiz-opciones"></div>
+              </fieldset>
+              <p class="quiz__error" id="quiz-error" hidden>Elige una opción para continuar.</p>
+              <div class="quiz__controles">
+                <button type="button" class="boton boton--claro" id="quiz-atras" disabled>Atrás</button>
+                <button type="submit" class="boton boton--primario" id="quiz-siguiente">Siguiente</button>
+              </div>
+            </form>
+
+            <noscript>
+              <p class="tarjeta" style="margin-top: 1rem;">Este diagnóstico necesita JavaScript. Actívalo en tu navegador, o si prefieres, <a href="../contacto.html">escríbeme directamente</a> y lo hacemos juntos.</p>
+            </noscript>
+          </div>
+
+          <!-- Vista del resultado -->
+          <div id="quiz-resultado" hidden aria-live="polite">
+            <div class="tarjeta">
+              <span class="etiqueta etiqueta--teal">Tu resultado</span>
+              <p class="resultado__paso">Estás en el <span id="resultado-paso"></span></p>
+              <p id="resultado-descripcion"></p>
+              <h2 style="font-size: 1.2rem; margin-top: 1.5rem;">Tus próximos 3 pasos</h2>
+              <ol class="resultado__lista" id="resultado-pasos"></ol>
+              <p>Un diagnóstico te dice dónde estás; un plan te lleva a donde quieres llegar. En una sesión de coaching convertimos este resultado en un plan a tu medida.</p>
+              <div class="reto__acciones">
+                <!-- Reemplaza #ACUITY_URL con el enlace directo de Acuity Scheduling -->
+                <a class="boton boton--primario" href="#ACUITY_URL">Agenda tu sesión de coaching</a>
+                <button type="button" class="boton boton--claro" id="quiz-reiniciar">Repetir el diagnóstico</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__rejilla">
+        <div>
+          <p class="footer__marca">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="15" stroke="#FFFFFF" stroke-width="2"/>
+              <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            Jubileo Financiero
+          </p>
+          <p>Coaching financiero personal en español. Un plan probado para salir de deudas, presupuestar con propósito y construir libertad.</p>
+        </div>
+        <nav aria-label="Enlaces del sitio">
+          <h2 class="footer__titulo">Sitio</h2>
+          <ul class="footer__lista">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../servicios.html">Servicios</a></li>
+            <li><a href="../herramientas.html">Herramientas</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__titulo">Contacto</h2>
+          <ul class="footer__lista">
+            <li><a href="mailto:hola@jubileofinanciero.com">hola@jubileofinanciero.com</a></li>
+            <li><a href="../contacto.html#agendar">Agendar una sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__descargo">Jubileo Financiero es una práctica independiente. [Nombre del coach] es un coach financiero entrenado por Ramsey Solutions, pero no es empleado de Ramsey Solutions ni habla en su nombre.</p>
+      <p class="footer__copy">© <span id="anio-actual">2025</span> Jubileo Financiero. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</div>
+<script src="../js/main.js"></script>
+<script src="../js/diagnostico.js"></script>
+</body>
+</html>

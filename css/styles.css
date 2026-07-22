@@ -948,6 +948,336 @@ p { margin-bottom: 1rem; }
   background-color: var(--blanco);
 }
 
+/* ---------- Herramientas: quiz de diagnóstico ---------- */
+
+.quiz {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.quiz__progreso {
+  height: 8px;
+  background-color: var(--gris-borde);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.quiz__progreso-barra {
+  height: 100%;
+  width: 0%;
+  background-color: var(--teal);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.quiz__progreso-texto {
+  font-size: 0.8rem;
+  color: var(--gris);
+  margin-bottom: 1.5rem;
+}
+
+.quiz fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz legend {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--carbon);
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+.quiz__opcion {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio-sm);
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.quiz__opcion:hover {
+  border-color: var(--teal);
+}
+
+.quiz__opcion input {
+  margin-top: 0.3rem;
+  accent-color: var(--teal-oscuro);
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.quiz__opcion:has(input:checked) {
+  border-color: var(--teal);
+  background-color: rgba(15, 191, 166, 0.07);
+}
+
+.quiz__opcion:has(input:focus-visible) {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.quiz__controles {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.quiz__error {
+  color: #C0392B;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+/* Resultado del quiz */
+.resultado__paso {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: var(--carbon);
+  margin-bottom: 0.5rem;
+}
+
+.resultado__paso span {
+  color: var(--teal-oscuro);
+}
+
+.resultado__lista {
+  list-style: none;
+  counter-reset: accion;
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.resultado__lista li {
+  counter-increment: accion;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.resultado__lista li::before {
+  content: counter(accion);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--carbon);
+  color: var(--teal);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ---------- Herramientas: reto 30 días ---------- */
+
+.reto__resumen {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .reto__resumen { grid-template-columns: repeat(2, 1fr); }
+}
+
+.reto__cifra {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--carbon);
+  line-height: 1.1;
+}
+
+.reto__cifra--teal { color: var(--teal-oscuro); }
+
+.reto__rejilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+@media (min-width: 520px) {
+  .reto__rejilla { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (min-width: 860px) {
+  .reto__rejilla { grid-template-columns: repeat(6, 1fr); }
+}
+
+.reto__dia {
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio-sm);
+  background-color: var(--blanco);
+  padding: 0.7rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.1s ease;
+}
+
+.reto__dia:hover {
+  border-color: var(--teal);
+}
+
+.reto__dia-numero {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+.reto__dia-monto {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--carbon);
+  min-height: 1.4em;
+}
+
+.reto__dia--hecho {
+  background-color: var(--carbon);
+  border-color: var(--carbon);
+}
+
+.reto__dia--hecho .reto__dia-numero {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reto__dia--hecho .reto__dia-monto {
+  color: var(--teal);
+}
+
+.reto__panel {
+  margin-top: 1.5rem;
+}
+
+.reto__panel .formulario__grupo {
+  margin-bottom: 0.9rem;
+}
+
+.reto__celebracion {
+  background-color: var(--carbon);
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radio);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.reto__celebracion h3 {
+  color: var(--blanco);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.reto__celebracion strong {
+  color: var(--teal);
+}
+
+.reto__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Herramientas: planificador de remesas ---------- */
+
+.remesas__salida {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.remesas__indicador {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--carbon);
+  line-height: 1.1;
+}
+
+.remesas__indicador--teal { color: var(--teal-oscuro); }
+
+.remesas__mensaje {
+  border-left: 3px solid var(--teal);
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--carbon);
+  margin: 1rem 0;
+}
+
+.formulario__grupo select {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio-sm);
+  background-color: var(--blanco);
+  color: var(--texto);
+}
+
+.formulario__grupo select:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(15, 191, 166, 0.18);
+}
+
+/* ---------- Herramientas: comparación crédito ---------- */
+
+.comparacion {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .comparacion { grid-template-columns: repeat(2, 1fr); }
+}
+
+.comparacion__lista {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.comparacion__lista li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  font-size: 0.97rem;
+}
+
+.comparacion__lista svg {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.comparacion__lista--gris svg { color: var(--gris); }
+.comparacion__lista--teal svg { color: var(--teal); }
+
+.tarjeta--oscura .comparacion__lista li {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 /* ---------- Footer ---------- */
 
 .footer {

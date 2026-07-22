@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificador de remesas inteligente — Jubileo Financiero</title>
+  <meta name="description" content="Ayudar a tu familia es un valor. Calcula qué porcentaje de tu ingreso representa tu remesa y encuentra un monto sostenible según tu etapa financiera.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Planificador de remesas inteligente — Jubileo Financiero">
+  <meta property="og:description" content="Encuentra un monto de remesa sostenible según tu Baby Step, para que puedas ayudar a tu familia por muchos años más.">
+  <meta property="og:url" content="https://www.jubileofinanciero.com/herramientas/remesas.html">
+  <meta property="og:locale" content="es_LA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="pagina">
+
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="contenedor header__inner">
+      <a class="logo" href="../index.html" aria-label="Jubileo Financiero — Inicio">
+        <svg class="logo__icono" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="#0C0F10" stroke-width="2"/>
+          <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        Jubileo Financiero
+      </a>
+      <button class="hamburguesa" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú de navegación">
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+      </button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="../index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="../servicios.html">Servicios</a></li>
+          <li><a class="nav__enlace" href="../herramientas.html" aria-current="page">Herramientas</a></li>
+          <li><a class="nav__enlace" href="../blog.html">Blog</a></li>
+          <li><a class="nav__enlace" href="../contacto.html">Contacto</a></li>
+          <li class="nav__cta"><a class="boton boton--primario" href="../contacto.html#agendar">Agenda tu sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero">
+      <div class="contenedor">
+        <span class="etiqueta etiqueta--teal">Herramientas · Calculadora</span>
+        <h1>Planificador de remesas <span class="hero__destacado">inteligente</span></h1>
+        <p class="hero__texto">Enviar dinero a tu familia es un acto de amor y uno de los valores más hermosos de nuestra cultura. Esta herramienta no te dice que dejes de ayudar — te ayuda a hacerlo de forma sostenible, para que puedas seguir dando por muchos años más.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor contacto-rejilla">
+
+        <!-- Formulario -->
+        <form class="tarjeta" id="remesas-formulario" novalidate>
+          <span class="etiqueta">Tus números</span>
+          <h2 style="margin-bottom: 1.25rem;">Cuéntame tu situación</h2>
+          <div class="formulario__grupo">
+            <label for="rem-ingreso">Ingreso neto mensual (lo que recibes después de impuestos)</label>
+            <input type="number" id="rem-ingreso" name="ingreso" min="1" step="0.01" inputmode="decimal" placeholder="Ej. 2800" required>
+          </div>
+          <div class="formulario__grupo">
+            <label for="rem-esenciales">Gastos esenciales mensuales (vivienda, comida, servicios, transporte)</label>
+            <input type="number" id="rem-esenciales" name="esenciales" min="0" step="0.01" inputmode="decimal" placeholder="Ej. 1500" required>
+          </div>
+          <div class="formulario__grupo">
+            <label for="rem-deudas">Pagos mínimos de deuda al mes (0 si no tienes deudas)</label>
+            <input type="number" id="rem-deudas" name="deudas" min="0" step="0.01" inputmode="decimal" placeholder="Ej. 250" required>
+          </div>
+          <div class="formulario__grupo">
+            <label for="rem-envio">¿Cuánto envías actualmente a tu familia cada mes?</label>
+            <input type="number" id="rem-envio" name="envio" min="0" step="0.01" inputmode="decimal" placeholder="Ej. 400" required>
+          </div>
+          <div class="formulario__grupo">
+            <label for="rem-paso">¿En qué Baby Step estás?</label>
+            <select id="rem-paso" name="paso" required>
+              <option value="1">Baby Step 1 — Aún no tengo $1,000 ahorrados</option>
+              <option value="2">Baby Step 2 — Estoy pagando deudas de consumo</option>
+              <option value="3">Baby Step 3 — Estoy completando mi fondo de 3–6 meses</option>
+              <option value="4">Baby Step 4 a 7 — Sin deudas de consumo y con fondo completo</option>
+              <option value="0">No lo sé todavía</option>
+            </select>
+            <p class="formulario__nota">¿No lo sabes? <a href="diagnostico.html">Haz el diagnóstico de 3 minutos</a> y vuelve aquí.</p>
+          </div>
+          <button type="submit" class="boton boton--primario boton--bloque">Calcular mi plan</button>
+          <p class="quiz__error" id="rem-error" hidden>Revisa los campos: todos los montos deben ser números válidos y el ingreso mayor que cero.</p>
+        </form>
+
+        <!-- Resultado -->
+        <div>
+          <div class="remesas__salida" id="remesas-salida" hidden aria-live="polite">
+            <div class="tarjeta">
+              <span class="etiqueta">Hoy tu remesa representa</span>
+              <p class="remesas__indicador"><span id="rem-porcentaje">0%</span> de tu ingreso</p>
+              <p id="rem-comentario-porcentaje"></p>
+            </div>
+            <div class="tarjeta tarjeta--oscura">
+              <span class="etiqueta etiqueta--teal">Rango sugerido para tu etapa</span>
+              <p class="remesas__indicador remesas__indicador--teal" id="rem-rango" style="color: #0FBFA6;">—</p>
+              <p id="rem-comentario-rango" style="margin-bottom: 0;"></p>
+            </div>
+            <div class="tarjeta">
+              <span class="etiqueta">Proyección: el poder de un ajuste temporal</span>
+              <p id="rem-proyeccion"></p>
+              <p class="remesas__mensaje">"No puedes dar de lo que no tienes." Cuidar tu propia estabilidad no es egoísmo: es lo que te permitirá ayudar más — y por más tiempo.</p>
+              <a class="boton boton--primario" href="../contacto.html#agendar">Conversemos sobre tu plan</a>
+            </div>
+          </div>
+
+          <div class="tarjeta" id="remesas-intro">
+            <span class="etiqueta">Cómo funciona</span>
+            <h3>Un plan, no un juicio</h3>
+            <p>Llena el formulario y te mostraré tres cosas: qué porcentaje de tu ingreso representa tu remesa hoy, un rango sostenible según tu etapa del plan, y cuánto más rápido llegarías a tu libertad financiera con un ajuste temporal.</p>
+            <p style="margin-bottom: 0;">Nada de esto sale de tu navegador: los cálculos se hacen aquí mismo y no se envían a ningún servidor.</p>
+          </div>
+
+          <noscript>
+            <p class="tarjeta" style="margin-top: 1.25rem;">Esta calculadora necesita JavaScript. Actívalo en tu navegador o <a href="../contacto.html">escríbeme</a> y hacemos el cálculo juntos en una sesión.</p>
+          </noscript>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA final ===== -->
+    <section class="seccion--oscura cta-final">
+      <div class="contenedor">
+        <span class="etiqueta etiqueta--teal">Hablemos con el corazón</span>
+        <h2>Ayudar a tu familia y construir tu futuro no son enemigos</h2>
+        <p>En una sesión de coaching diseñamos un plan donde ambas cosas caben — con números reales y sin culpa.</p>
+        <a class="boton boton--teal" href="../contacto.html#agendar">Agendar mi sesión</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__rejilla">
+        <div>
+          <p class="footer__marca">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="15" stroke="#FFFFFF" stroke-width="2"/>
+              <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            Jubileo Financiero
+          </p>
+          <p>Coaching financiero personal en español. Un plan probado para salir de deudas, presupuestar con propósito y construir libertad.</p>
+        </div>
+        <nav aria-label="Enlaces del sitio">
+          <h2 class="footer__titulo">Sitio</h2>
+          <ul class="footer__lista">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../servicios.html">Servicios</a></li>
+            <li><a href="../herramientas.html">Herramientas</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__titulo">Contacto</h2>
+          <ul class="footer__lista">
+            <li><a href="mailto:hola@jubileofinanciero.com">hola@jubileofinanciero.com</a></li>
+            <li><a href="../contacto.html#agendar">Agendar una sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__descargo">Jubileo Financiero es una práctica independiente. [Nombre del coach] es un coach financiero entrenado por Ramsey Solutions, pero no es empleado de Ramsey Solutions ni habla en su nombre.</p>
+      <p class="footer__copy">© <span id="anio-actual">2025</span> Jubileo Financiero. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</div>
+<script src="../js/main.js"></script>
+<script src="../js/remesas.js"></script>
+</body>
+</html>
