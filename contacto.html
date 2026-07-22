@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y agenda — Jubileo Financiero</title>
+  <meta name="description" content="Escríbenos o agenda tu sesión de coaching financiero en línea. Formulario de contacto y calendario de citas de Jubileo Financiero.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contacto y agenda — Jubileo Financiero">
+  <meta property="og:description" content="Escríbenos o agenda tu sesión de coaching financiero en línea.">
+  <meta property="og:url" content="https://www.jubileofinanciero.com/contacto.html">
+  <meta property="og:locale" content="es_LA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="pagina">
+
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="contenedor header__inner">
+      <a class="logo" href="index.html" aria-label="Jubileo Financiero — Inicio">
+        <svg class="logo__icono" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="#0C0F10" stroke-width="2"/>
+          <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        Jubileo Financiero
+      </a>
+      <button class="hamburguesa" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú de navegación">
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+      </button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="servicios.html">Servicios</a></li>
+          <li><a class="nav__enlace" href="blog.html">Blog</a></li>
+          <li><a class="nav__enlace" href="contacto.html" aria-current="page">Contacto</a></li>
+          <li class="nav__cta"><a class="boton boton--primario" href="#agendar">Agenda tu sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Encabezado de página ===== -->
+    <section class="hero">
+      <div class="contenedor">
+        <span class="etiqueta etiqueta--teal">Contacto</span>
+        <h1>Conversemos sobre tu <span class="hero__destacado">próximo paso</span></h1>
+        <p class="hero__texto">¿Tienes preguntas antes de agendar? Escríbeme con confianza. Y si ya estás listo, elige tu horario directamente en el calendario.</p>
+      </div>
+    </section>
+
+    <!-- ===== Formulario y datos ===== -->
+    <section class="seccion">
+      <div class="contenedor contacto-rejilla">
+
+        <div class="tarjeta">
+          <span class="etiqueta">Escríbeme</span>
+          <h2>Formulario de contacto</h2>
+          <!-- Reemplaza TU_ID_DE_FORMSPREE con el ID real de tu formulario en formspree.io -->
+          <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+            <div class="formulario__grupo">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div class="formulario__grupo">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="formulario__grupo">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+            </div>
+            <button class="boton boton--primario" type="submit">Enviar mensaje</button>
+            <p class="formulario__nota">Respondo normalmente en 1–2 días hábiles. Tu información no se comparte con nadie.</p>
+          </form>
+        </div>
+
+        <div>
+          <div class="tarjeta" style="margin-bottom: 1.25rem;">
+            <span class="etiqueta">Datos de contacto</span>
+            <h2 style="margin-bottom: 1.25rem;">También me encuentras aquí</h2>
+            <div class="dato-contacto">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <div>
+                <strong>Correo electrónico</strong>
+                <a href="mailto:hola@jubileofinanciero.com">hola@jubileofinanciero.com</a>
+              </div>
+            </div>
+            <div class="dato-contacto">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+1 (555) 000-0000 <em>(reemplazar)</em></span>
+              </div>
+            </div>
+            <div class="dato-contacto" style="margin-bottom: 0;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <div>
+                <strong>Horario de atención</strong>
+                <span>Lunes a viernes, 9:00 a.m. – 6:00 p.m.</span>
+              </div>
+            </div>
+          </div>
+          <div class="tarjeta tarjeta--oscura">
+            <span class="etiqueta etiqueta--teal">¿Listo para empezar?</span>
+            <h3>Agenda directamente abajo</h3>
+            <p style="margin-bottom: 0;">Si ya sabes qué paquete quieres, salta el formulario y elige tu horario en el calendario. El pago se procesa al confirmar tu cita.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Agendamiento (Acuity) ===== -->
+    <section class="seccion seccion--blanca" id="agendar">
+      <div class="contenedor">
+        <div class="seccion__encabezado seccion__encabezado--centrado">
+          <span class="etiqueta">Agenda en línea</span>
+          <h2>Elige tu horario</h2>
+          <p>Selecciona el tipo de sesión, el día y la hora. Recibirás la confirmación por correo al instante.</p>
+        </div>
+        <!-- Reemplaza owner=XXXX con el ID real de tu cuenta de Acuity Scheduling -->
+        <iframe
+          src="https://app.acuityscheduling.com/schedule.php?owner=XXXX"
+          title="Calendario de citas de Jubileo Financiero"
+          class="acuity-marco"
+          loading="lazy"></iframe>
+        <script src="https://embed.acuityscheduling.com/js/embed.js" async></script>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__rejilla">
+        <div>
+          <p class="footer__marca">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="15" stroke="#FFFFFF" stroke-width="2"/>
+              <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            Jubileo Financiero
+          </p>
+          <p>Coaching financiero personal en español. Un plan probado para salir de deudas, presupuestar con propósito y construir libertad.</p>
+        </div>
+        <nav aria-label="Enlaces del sitio">
+          <h2 class="footer__titulo">Sitio</h2>
+          <ul class="footer__lista">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__titulo">Contacto</h2>
+          <ul class="footer__lista">
+            <li><a href="mailto:hola@jubileofinanciero.com">hola@jubileofinanciero.com</a></li>
+            <li><a href="contacto.html#agendar">Agendar una sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__descargo">Jubileo Financiero es una práctica independiente. [Nombre del coach] es un coach financiero entrenado por Ramsey Solutions, pero no es empleado de Ramsey Solutions ni habla en su nombre.</p>
+      <p class="footer__copy">© <span id="anio-actual">2025</span> Jubileo Financiero. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
