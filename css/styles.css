@@ -1241,6 +1241,67 @@ p { margin-bottom: 1rem; }
   box-shadow: 0 0 0 3px rgba(15, 191, 166, 0.18);
 }
 
+/* ---------- Iglesias: tabla resumen ---------- */
+
+.tabla-envoltura {
+  overflow-x: auto;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio);
+  background-color: var(--blanco);
+  box-shadow: var(--sombra);
+}
+
+.tabla-resumen {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+}
+
+.tabla-resumen caption {
+  text-align: left;
+  padding: 1.25rem 1.5rem 0.25rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--carbon);
+}
+
+.tabla-resumen th,
+.tabla-resumen td {
+  padding: 0.85rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.tabla-resumen tbody tr:last-child th,
+.tabla-resumen tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-resumen thead th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+.tabla-resumen tbody th {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--teal-oscuro);
+  white-space: nowrap;
+}
+
+/* ---------- Iglesias: principios ---------- */
+
+.principio__titulo {
+  color: var(--teal-oscuro);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
 /* ---------- Herramientas: comparación crédito ---------- */
 
 .comparacion {

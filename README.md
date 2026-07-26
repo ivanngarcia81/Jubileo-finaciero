@@ -11,6 +11,7 @@ Sitio web estático (HTML, CSS y JavaScript vanilla, sin frameworks ni build too
 ├── blog.html                   # Índice del blog
 ├── contacto.html               # Formulario (Formspree) + iframe de Acuity + datos
 ├── herramientas.html           # Índice de herramientas gratuitas
+├── iglesias.html               # Los 7 Pasos de Bebé para Iglesias
 ├── blog/
 │   ├── comportamiento-y-deudas.html
 │   ├── presupuesto-base-cero.html
