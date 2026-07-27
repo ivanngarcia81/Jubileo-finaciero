@@ -303,7 +303,7 @@ p { margin-bottom: 1rem; }
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (min-width: 860px) {
+@media (min-width: 1024px) {
   .hamburguesa { display: none; }
 
   .nav {

@@ -10,8 +10,16 @@ Sitio web estático (HTML, CSS y JavaScript vanilla, sin frameworks ni build too
 ├── servicios.html              # Servicios, precios y botones de Acuity
 ├── blog.html                   # Índice del blog
 ├── contacto.html               # Formulario (Formspree) + iframe de Acuity + datos
+├── sobre-mi.html               # Historia y credenciales del coach
 ├── herramientas.html           # Índice de herramientas gratuitas
 ├── iglesias.html               # Los 7 Pasos de Bebé para Iglesias
+├── privacidad.html             # Aviso de privacidad
+├── gracias.html                # Página de gracias tras enviar el formulario
+├── 404.html                    # Página de error personalizada
+├── favicon.svg                 # Ícono del sitio
+├── og-image.png                # Imagen para compartir en redes (1200×630)
+├── sitemap.xml                 # Mapa del sitio para buscadores
+├── robots.txt                  # Directivas para buscadores
 ├── blog/
 │   ├── comportamiento-y-deudas.html
 │   ├── presupuesto-base-cero.html
@@ -73,7 +81,23 @@ Los 3 testimonios de la sección "Historias reales de libertad financiera" son p
 
 ### Open Graph / dominio
 
-Las etiquetas `og:url` usan `https://www.jubileofinanciero.com/...` como ejemplo. Reemplázalas con tu dominio real en cada página.
+El dominio de ejemplo `https://www.jubileofinanciero.com` aparece en varios lugares. Reemplázalo con tu dominio real en:
+- Las etiquetas `og:url` y `og:image` de cada página HTML.
+- `sitemap.xml` (todas las URLs) y `robots.txt` (línea `Sitemap:`).
+- Los bloques `<script type="application/ld+json">` de `index.html`, `servicios.html` y los artículos del blog.
+- El campo oculto `_next` del formulario en `contacto.html` (redirige a `gracias.html` tras el envío; en el plan gratuito de Formspree este redirect puede no aplicarse y se usa su página de confirmación estándar).
+
+### Página "Sobre mí" (sobre-mi.html)
+
+Los tres párrafos de la sección "Mi historia" son placeholders entre corchetes con guías de qué escribir. Reemplázalos con tu historia real y sustituye el bloque del avatar SVG por una foto tuya (las instrucciones están en un comentario HTML en esa misma página).
+
+### Imagen para redes sociales (og-image.png)
+
+Se incluye una imagen de marca de 1200×630 px que aparece al compartir el sitio por WhatsApp, Facebook, etc. Si quieres personalizarla (por ejemplo, con tu foto), reemplaza el archivo `og-image.png` manteniendo el mismo nombre y tamaño.
+
+### Página 404
+
+`404.html` usa rutas absolutas desde la raíz (`/css/styles.css`, `/`). Funciona tal cual en Hostinger, Netlify o GitHub Pages con dominio propio. Si publicas en GitHub Pages como sitio de proyecto (`usuario.github.io/nombre-repo/`), cambia los `/` iniciales por `/nombre-repo/` (hay un comentario en el archivo que lo indica).
 
 ## 2. Agregar artículos nuevos al blog
 
