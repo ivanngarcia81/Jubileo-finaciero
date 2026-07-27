@@ -1,0 +1,10 @@
+Carpeta de imágenes del sitio.
+
+Sube aquí la foto del coach con el nombre EXACTO:
+
+    foto-coach.jpg
+
+Recomendaciones: al menos 800px de ancho, orientación vertical o cuadrada,
+formato JPG optimizado (menos de 500 KB idealmente). La página sobre-mi.html
+la mostrará automáticamente; mientras el archivo no exista, se muestra un
+marcador de posición.

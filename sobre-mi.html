@@ -66,16 +66,22 @@
             <a class="boton boton--primario" href="contacto.html#agendar">Agenda una sesión conmigo</a>
           </div>
         </div>
-        <!-- Reemplaza este bloque por una foto real:
-             <img src="img/foto-coach.jpg" alt="[Nombre del coach], coach financiero" style="border-radius: 14px;">
-             (crea la carpeta /img/ y usa una foto de al menos 800px de ancho) -->
-        <div class="hero__tarjeta" aria-hidden="true" style="display: flex; align-items: center; justify-content: center; min-height: 320px;">
-          <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
-            <circle cx="70" cy="70" r="68" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-            <circle cx="70" cy="52" r="24" fill="rgba(15,191,166,0.35)"/>
-            <path d="M28 118 C 28 90, 112 90, 112 118" fill="rgba(15,191,166,0.35)"/>
-            <text x="70" y="134" text-anchor="middle" fill="#8A9094" font-size="10" font-family="sans-serif">Tu foto aquí</text>
-          </svg>
+        <!-- La foto del coach vive en img/foto-coach.jpg. Si el archivo aún no
+             existe, la imagen se oculta sola y se muestra el marcador de abajo. -->
+        <div class="hero__tarjeta" style="padding: 0; overflow: hidden; min-height: 320px; position: relative;">
+          <img src="img/foto-coach.jpg"
+               alt="[Nombre del coach], coach financiero de Jubileo Financiero"
+               style="width: 100%; height: 100%; min-height: 320px; object-fit: cover; object-position: top center;"
+               onload="var m = document.getElementById('foto-marcador'); if (m) m.hidden = true;"
+               onerror="this.hidden = true;">
+          <div id="foto-marcador" aria-hidden="true" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+            <svg width="140" height="140" viewBox="0 0 140 140" fill="none">
+              <circle cx="70" cy="70" r="68" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+              <circle cx="70" cy="52" r="24" fill="rgba(15,191,166,0.35)"/>
+              <path d="M28 118 C 28 90, 112 90, 112 118" fill="rgba(15,191,166,0.35)"/>
+              <text x="70" y="134" text-anchor="middle" fill="#8A9094" font-size="10" font-family="sans-serif">Tu foto aquí</text>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
