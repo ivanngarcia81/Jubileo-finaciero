@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aviso de privacidad — Jubileo Financiero</title>
-  <meta name="description" content="Cómo Jubileo Financiero recopila, usa y protege tu información personal.">
+  <title>Red de profesionales aliados — Jubileo Financiero</title>
+  <meta name="description" content="Cuando tu plan necesita un producto, una declaración de impuestos o una decisión legal, te conecto con profesionales licenciados de confianza: inversiones, hipotecas, impuestos, seguros y más.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Aviso de privacidad — Jubileo Financiero">
-  <meta property="og:description" content="Cómo recopilamos, usamos y protegemos tu información personal.">
-  <meta property="og:url" content="https://www.jubileofinanciero.com/privacidad.html">
+  <meta property="og:title" content="Red de profesionales aliados — Jubileo Financiero">
+  <meta property="og:description" content="Profesionales licenciados de confianza para cada etapa de tu plan: inversiones, hipotecas, impuestos, seguros, asuntos legales y más.">
+  <meta property="og:url" content="https://www.jubileofinanciero.com/aliados.html">
   <meta property="og:locale" content="es_LA">
   <meta property="og:image" content="https://www.jubileofinanciero.com/og-image.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <meta name="robots" content="noindex, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -45,7 +44,7 @@
           <li><a class="nav__enlace" href="servicios.html">Servicios</a></li>
           <li><a class="nav__enlace" href="herramientas.html">Herramientas</a></li>
           <li><a class="nav__enlace" href="iglesias.html">Iglesias</a></li>
-          <li><a class="nav__enlace" href="aliados.html">Red de aliados</a></li>
+          <li><a class="nav__enlace" href="aliados.html" aria-current="page">Red de aliados</a></li>
           <li><a class="nav__enlace" href="blog.html">Blog</a></li>
           <li><a class="nav__enlace" href="contacto.html">Contacto</a></li>
           <li class="nav__cta"><a class="boton boton--primario" href="contacto.html#agendar">Agenda tu sesión</a></li>
@@ -55,45 +54,51 @@
   </header>
 
   <main id="contenido">
-    <div class="contenedor">
-      <article class="articulo">
-        <h1>Aviso de privacidad</h1>
-        <p class="articulo__meta">Última actualización: [Fecha — actualízala cuando modifiques este aviso]</p>
 
-        <p>En <strong>Jubileo Financiero</strong> ("nosotros") respetamos tu privacidad. Este aviso explica qué información recopilamos a través de este sitio web, cómo la usamos y qué derechos tienes sobre ella.</p>
+    <!-- ===== Encabezado de página ===== -->
+    <section class="hero">
+      <div class="contenedor">
+        <span class="etiqueta etiqueta--teal">Red de aliados</span>
+        <h1>Red de profesionales <span class="hero__destacado">aliados</span></h1>
+        <p class="hero__texto">Como coach financiero mi trabajo es tu plan y tu comportamiento con el dinero. Cuando llega el momento de un producto, una declaración de impuestos o una decisión legal, te conecto con profesionales licenciados de confianza. Así nunca tomas esa decisión solo, ni con la persona equivocada.</p>
+      </div>
+    </section>
 
-        <h2>Información que recopilamos</h2>
-        <ul>
-          <li><strong>Formulario de contacto:</strong> tu nombre, correo electrónico y el mensaje que nos envías. Este formulario se procesa a través de Formspree, que actúa como proveedor de envío.</li>
-          <li><strong>Agendamiento de citas:</strong> al agendar una sesión, los datos que proporcionas (nombre, correo, información de pago) se procesan directamente en Acuity Scheduling. Nosotros no almacenamos tu información de pago.</li>
-          <li><strong>Herramientas interactivas:</strong> el diagnóstico financiero, el reto de 30 días y el planificador de remesas funcionan completamente en tu navegador. Los datos que ingresas en ellos <strong>no se envían a ningún servidor</strong>; el progreso del reto se guarda solo en el almacenamiento local de tu dispositivo.</li>
-        </ul>
+    <!-- ===== Categorías ===== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="rejilla rejilla--3" id="aliados-lista">
+          <!-- Las tarjetas de categorías se pintan desde js/aliados-data.js -->
+        </div>
+        <noscript>
+          <p class="tarjeta">Esta sección necesita JavaScript para mostrar las categorías de la red. Si no puedes activarlo, <a href="contacto.html">escríbeme</a> y con gusto te comparto la referencia que necesites.</p>
+        </noscript>
+      </div>
+    </section>
 
-        <h2>Cómo usamos tu información</h2>
-        <ul>
-          <li>Responder a tus mensajes y solicitudes.</li>
-          <li>Coordinar y dar seguimiento a tus sesiones de coaching.</li>
-          <li>Nunca vendemos ni rentamos tu información personal a terceros.</li>
-        </ul>
+    <!-- ===== Reclutamiento ===== -->
+    <section class="seccion seccion--blanca">
+      <div class="contenedor">
+        <div class="tarjeta tarjeta--oscura" style="display: grid; gap: 1rem; padding: 2.5rem;">
+          <h2 style="max-width: 24ch;">¿Eres un profesional licenciado?</h2>
+          <p style="max-width: 65ch; margin-bottom: 0.5rem;">Estoy formando una red de profesionales que comparten esta filosofía: sin deuda, sin presión de venta y con el cliente primero. Si eres asesor de inversiones, oficial de préstamos, contador, agente de seguros o abogado, escríbeme.</p>
+          <div>
+            <a class="boton boton--teal" href="contacto.html">Quiero formar parte de la red</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h2>Servicios de terceros</h2>
-        <p>Este sitio utiliza servicios externos que tienen sus propias políticas de privacidad:</p>
-        <ul>
-          <li><a href="https://formspree.io/legal/privacy-policy/" rel="noopener">Formspree</a> — procesamiento del formulario de contacto.</li>
-          <li><a href="https://www.squarespace.com/privacy" rel="noopener">Acuity Scheduling</a> — agendamiento y pago de citas.</li>
-          <li><a href="https://policies.google.com/privacy" rel="noopener">Google Fonts</a> — tipografías del sitio.</li>
-        </ul>
+    <!-- ===== Aviso de alcance ===== -->
+    <section class="seccion" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+      <div class="contenedor">
+        <div class="aviso-alcance">
+          <strong>Sobre mi alcance profesional</strong>
+          Soy coach financiero graduado del Financial Coach Master Training de Ramsey Solutions. Mi servicio es educación y coaching de comportamiento financiero. No soy asesor de inversiones registrado, contador, agente de seguros ni abogado, y no doy asesoría de inversiones, fiscal, de seguros ni legal. No vendo productos financieros y no recibo comisiones por los profesionales que te recomiendo. Jubileo Financiero es una práctica independiente y no representa a Ramsey Solutions.
+        </div>
+      </div>
+    </section>
 
-        <h2>Confidencialidad del coaching</h2>
-        <p>Todo lo que compartas en una sesión de coaching — tu situación financiera, tus deudas, tus metas — se trata con estricta confidencialidad y no se comparte con nadie sin tu autorización.</p>
-
-        <h2>Tus derechos</h2>
-        <p>Puedes solicitar en cualquier momento el acceso, la corrección o la eliminación de tu información personal escribiendo a <a href="mailto:hola@jubileofinanciero.com">hola@jubileofinanciero.com</a>.</p>
-
-        <h2>Cambios a este aviso</h2>
-        <p>Podemos actualizar este aviso ocasionalmente. La fecha de la última actualización siempre aparecerá al inicio de esta página.</p>
-      </article>
-    </div>
   </main>
 
   <!-- ===== Footer ===== -->
@@ -139,5 +144,7 @@
 
 </div>
 <script src="js/main.js"></script>
+<script src="js/aliados-data.js"></script>
+<script src="js/aliados.js"></script>
 </body>
 </html>

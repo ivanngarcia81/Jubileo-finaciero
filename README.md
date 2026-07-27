@@ -13,6 +13,7 @@ Sitio web estático (HTML, CSS y JavaScript vanilla, sin frameworks ni build too
 ├── sobre-mi.html               # Historia y credenciales del coach
 ├── herramientas.html           # Índice de herramientas gratuitas
 ├── iglesias.html               # Los 7 Pasos de Bebé para Iglesias
+├── aliados.html                # Red de profesionales aliados
 ├── privacidad.html             # Aviso de privacidad
 ├── gracias.html                # Página de gracias tras enviar el formulario
 ├── 404.html                    # Página de error personalizada
@@ -34,7 +35,9 @@ Sitio web estático (HTML, CSS y JavaScript vanilla, sin frameworks ni build too
 │   ├── main.js                 # Menú hamburguesa y año del footer
 │   ├── diagnostico.js          # Lógica del quiz de diagnóstico
 │   ├── reto.js                 # Tracker de 30 días (guarda en localStorage)
-│   └── remesas.js              # Cálculos del planificador de remesas
+│   ├── remesas.js              # Cálculos del planificador de remesas
+│   ├── aliados-data.js         # DATOS de la red de aliados (edita aquí)
+│   └── aliados.js              # Pinta las tarjetas de la red de aliados
 └── README.md
 ```
 
@@ -48,17 +51,19 @@ En el footer de **todas** las páginas aparece el texto `[Nombre del coach]` den
 
 ### Precios (servicios.html)
 
-Los tres montos son de ejemplo: `$99`, `$449` y `$799`. Edita las líneas con la clase `precio-tarjeta__monto` en `servicios.html`. También puedes ajustar los textos de "qué incluye" en cada lista.
+Los precios viven en la sección `id="precios"` de `servicios.html`, uno por tarjeta, en las líneas con la clase `precio-tarjeta__monto` (Gratis, $199, $349 con referencia $398 tachada, $499, $199, Cotización). Edita el monto directamente en el HTML de cada tarjeta.
 
 ### URLs de Acuity Scheduling
 
-1. **Botones "Agendar y pagar"** (`servicios.html`): hay 3 enlaces con esta forma:
+1. **Botones de reserva** (`servicios.html`, sección `id="precios"`): hay 6 enlaces marcados con un comentario `TODO` en el código, con esta forma:
    ```
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=SESION_INICIAL
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=PAQUETE_3_MESES
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=PAQUETE_6_MESES
+   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=CONSULTA_INICIAL
+   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=SESION_ARRANQUE
+   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=PLAN_JUBILEO
+   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=ACOMPANAMIENTO_3_MESES
+   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=SESION_SEGUIMIENTO
    ```
-   Reemplaza `owner=XXXX` con tu ID de cuenta y `appointmentType=...` con el ID numérico real de cada tipo de cita. En Acuity: **Scheduling Page Link → Direct links & embedding → Appointment type links**.
+   (La consulta gratis aparece dos veces: en su tarjeta y en el CTA final de la página.) Reemplaza `owner=XXXX` con tu ID de cuenta y `appointmentType=...` con el ID numérico real de cada tipo de cita. En Acuity: **Scheduling Page Link → Direct links & embedding → Appointment type links**. El botón "Solicitar cotización" de Talleres y grupos apunta al formulario de contacto y no necesita Acuity.
 
 2. **Iframe del calendario** (`contacto.html`, sección `#agendar`): reemplaza `owner=XXXX` en el atributo `src` del `<iframe>` con tu ID de cuenta. El pago se procesa dentro de Acuity; el sitio no necesita lógica de pago propia.
 
@@ -98,6 +103,10 @@ Se incluye una imagen de marca de 1200×630 px que aparece al compartir el sitio
 ### Página 404
 
 `404.html` usa rutas absolutas desde la raíz (`/css/styles.css`, `/`). Funciona tal cual en Hostinger, Netlify o GitHub Pages con dominio propio. Si publicas en GitHub Pages como sitio de proyecto (`usuario.github.io/nombre-repo/`), cambia los `/` iniciales por `/nombre-repo/` (hay un comentario en el archivo que lo indica).
+
+### Red de profesionales aliados (aliados.html)
+
+Los datos de la red viven en **`js/aliados-data.js`** — nunca en el HTML. Al inicio de ese archivo hay instrucciones completas en español. En resumen: busca la categoría, agrega un objeto con `nombre`, `especialidad`, `ciudad`, `idioma` y `contacto` dentro de su lista `profesionales`, y cambia el `estado` de `"en-formacion"` a `"activo"`. Mientras una categoría esté vacía, la página muestra el badge "Red en formación" automáticamente.
 
 ## 2. Agregar artículos nuevos al blog
 

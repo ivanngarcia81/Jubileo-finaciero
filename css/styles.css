@@ -18,6 +18,7 @@
   --teal: #0FBFA6;
   --teal-oscuro: #0CA18C;
   --gris: #8A9094;
+  --gris-texto: #4F565A; /* gris con contraste AA para letra pequeña sobre fondos claros */
   --gris-borde: #E2E4E7;
   --texto: #23272A;
   --serif: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -210,6 +211,8 @@ p { margin-bottom: 1rem; }
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--carbon);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .logo:hover,
@@ -303,7 +306,7 @@ p { margin-bottom: 1rem; }
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1120px) {
   .hamburguesa { display: none; }
 
   .nav {
@@ -317,12 +320,18 @@ p { margin-bottom: 1rem; }
   .nav__lista {
     flex-direction: row;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
     padding: 0;
   }
 
   .nav__enlace {
-    padding: 0.5rem 0.85rem;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .nav__cta .boton {
+    white-space: nowrap;
   }
 
   .nav__cta {
@@ -1239,6 +1248,144 @@ p { margin-bottom: 1rem; }
   outline: none;
   border-color: var(--teal);
   box-shadow: 0 0 0 3px rgba(15, 191, 166, 0.18);
+}
+
+/* Texto solo para lectores de pantalla */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Precios: variantes ---------- */
+
+.precio-tarjeta .boton {
+  margin-top: auto;
+}
+
+
+.precio-tarjeta__monto--teal {
+  color: var(--teal-oscuro);
+}
+
+.precio-tarjeta__antes {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--gris);
+  margin-left: 0.5rem;
+}
+
+.precio-tarjeta__nota {
+  font-size: 0.8rem;
+  color: var(--gris-texto);
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.precios-condiciones {
+  font-size: 0.85rem;
+  color: var(--gris-texto);
+  max-width: 75ch;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+/* ---------- Aviso de alcance profesional ---------- */
+
+.aviso-alcance {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--gris-texto);
+  border-top: 1px solid var(--gris-borde);
+  padding-top: 1.5rem;
+  max-width: 75ch;
+}
+
+.aviso-alcance strong {
+  display: block;
+  color: var(--carbon);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Red de aliados ---------- */
+
+.aliado {
+  display: flex;
+  flex-direction: column;
+}
+
+.aliado__insignia {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: rgba(15, 191, 166, 0.12);
+  color: var(--teal-oscuro);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  margin-top: auto;
+}
+
+.aliado__credencial {
+  font-size: 0.8rem;
+  color: var(--gris-texto);
+  margin-bottom: 1rem;
+}
+
+.aliado__credencial strong {
+  color: var(--carbon);
+  font-weight: 600;
+}
+
+.aliado__profesionales {
+  list-style: none;
+  border-top: 1px solid var(--gris-borde);
+  margin-top: 0.25rem;
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.aliado__profesional strong {
+  display: block;
+  color: var(--carbon);
+}
+
+.aliado__profesional span {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--gris-texto);
+}
+
+.aliado__profesional a {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ---------- Movimiento reducido ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 /* ---------- Iglesias: tabla resumen ---------- */
