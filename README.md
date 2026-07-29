@@ -75,10 +75,10 @@ El formulario apunta a `https://formspree.io/f/TU_ID_DE_FORMSPREE`. Crea un form
 
 ### Datos de contacto
 
-En `contacto.html` y en el footer de todas las páginas:
-- Correo: `hola@jubileofinanciero.com` (reemplázalo por el real).
-- WhatsApp: `+1 (555) 000-0000`.
-- Horario de atención.
+Ya configurados en `contacto.html` y en el footer de todas las páginas:
+- Correo: `ivanngarcia82@gmail.com`.
+- WhatsApp: `+1 (862) 273-2134` (con enlace directo a wa.me).
+- Si cambias alguno, busca el valor actual en todos los archivos HTML y reemplázalo. El horario de atención se edita en `contacto.html`.
 
 ### Testimonios (index.html)
 
