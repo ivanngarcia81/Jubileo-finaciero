@@ -94,7 +94,7 @@ El dominio de ejemplo `https://www.jubileofinanciero.com` aparece en varios luga
 
 ### Página "Sobre mí" (sobre-mi.html)
 
-Los tres párrafos de la sección "Mi historia" son placeholders entre corchetes con guías de qué escribir. Reemplázalos con tu historia real y sustituye el bloque del avatar SVG por una foto tuya (las instrucciones están en un comentario HTML en esa misma página).
+La historia del coach y su foto (`img/foto-coach.jpg`) ya están integradas. Para editar la historia, modifica los tres párrafos dentro de `<article class="articulo">` en `sobre-mi.html`. Para cambiar la foto, reemplaza `img/foto-coach.jpg` manteniendo el mismo nombre.
 
 ### Imagen para redes sociales (og-image.png)
 
