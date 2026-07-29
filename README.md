@@ -53,21 +53,23 @@ Ya está configurado como **Iván García** en el descargo del footer de todas l
 
 Los precios viven en la sección `id="precios"` de `servicios.html`, uno por tarjeta, en las líneas con la clase `precio-tarjeta__monto` (Gratis, $199, $349 con referencia $398 tachada, $499, $199, Cotización). Edita el monto directamente en el HTML de cada tarjeta.
 
-### URLs de Acuity Scheduling
+### Acuity Scheduling (ya configurado)
 
-1. **Botones de reserva** (`servicios.html`, sección `id="precios"`): hay 6 enlaces marcados con un comentario `TODO` en el código, con esta forma:
-   ```
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=CONSULTA_INICIAL
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=SESION_ARRANQUE
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=PLAN_JUBILEO
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=ACOMPANAMIENTO_3_MESES
-   https://app.acuityscheduling.com/schedule.php?owner=XXXX&appointmentType=SESION_SEGUIMIENTO
-   ```
-   (La consulta gratis aparece dos veces: en su tarjeta y en el CTA final de la página.) Reemplaza `owner=XXXX` con tu ID de cuenta y `appointmentType=...` con el ID numérico real de cada tipo de cita. En Acuity: **Scheduling Page Link → Direct links & embedding → Appointment type links**. El botón "Solicitar cotización" de Talleres y grupos apunta al formulario de contacto y no necesita Acuity.
+La cuenta es `owner=39977052` y los enlaces reales ya están conectados en el sitio:
 
-2. **Iframe del calendario** (`contacto.html`, sección `#agendar`): reemplaza `owner=XXXX` en el atributo `src` del `<iframe>` con tu ID de cuenta. El pago se procesa dentro de Acuity; el sitio no necesita lógica de pago propia.
+| Botón / lugar | Tipo de cita | appointmentType |
+|---|---|---|
+| "Agenda tu consulta gratis" (tarjeta + CTA final de `servicios.html`, y resultado del quiz) | Consulta inicial | `96427185` |
+| "Reservar sesión de arranque" | Sesión de arranque | `96429754` |
+| "Reservar el Plan Jubileo" | Plan Jubileo | `96431144` |
+| "Reservar acompañamiento" | Acompañamiento de 3 meses | `96431666` |
+| "Reservar seguimiento" | Sesión de seguimiento | `96431733` |
 
-3. **Botón del resultado del quiz** (`herramientas/diagnostico.html`): el botón "Agenda tu sesión de coaching" apunta al placeholder `#ACUITY_URL`. Reemplázalo con tu enlace directo de Acuity (o con `../contacto.html#agendar` si prefieres llevar al usuario a la página de contacto).
+El iframe de `contacto.html` (sección `#agendar`) usa el enlace general con los 5 tipos de cita.
+
+Si algún día cambias un tipo de cita en Acuity y su ID cambia, busca el número viejo en los archivos HTML y reemplázalo. El botón "Solicitar cotización" de Talleres y grupos apunta al formulario de contacto y no usa Acuity.
+
+**Importante:** para cobrar las 4 sesiones de pago hay que conectar Stripe, Square o PayPal dentro de Acuity (menú → Payments), y mantener la suscripción activa después de la prueba gratuita.
 
 ### Formspree (contacto.html)
 
