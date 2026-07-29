@@ -45,9 +45,9 @@ Sitio web estático (HTML, CSS y JavaScript vanilla, sin frameworks ni build too
 
 Busca y reemplaza estos valores antes de publicar. Puedes usar la función "Buscar en archivos" de tu editor.
 
-### Nombre del coach (obligatorio)
+### Nombre del coach
 
-En el footer de **todas** las páginas aparece el texto `[Nombre del coach]` dentro del descargo de Ramsey Solutions. Reemplázalo por el nombre real en los 7 archivos HTML.
+Ya está configurado como **Iván García** en el descargo del footer de todas las páginas, en el titular de `sobre-mi.html` y en el autor de los artículos del blog. Si algún día necesitas cambiarlo, busca "Iván García" en todos los archivos HTML y reemplázalo.
 
 ### Precios (servicios.html)
 
