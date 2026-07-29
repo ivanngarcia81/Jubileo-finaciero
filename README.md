@@ -71,9 +71,11 @@ Si algún día cambias un tipo de cita en Acuity y su ID cambia, busca el númer
 
 **Importante:** para cobrar las 4 sesiones de pago hay que conectar Stripe, Square o PayPal dentro de Acuity (menú → Payments), y mantener la suscripción activa después de la prueba gratuita.
 
-### Formspree (contacto.html)
+### Formspree (ya configurado)
 
-El formulario apunta a `https://formspree.io/f/TU_ID_DE_FORMSPREE`. Crea un formulario gratuito en [formspree.io](https://formspree.io), copia tu ID (algo como `xyzabcde`) y reemplaza `TU_ID_DE_FORMSPREE`.
+El formulario de `contacto.html` envía a `https://formspree.io/f/mnjerbby`, que entrega los mensajes a `ivanngarcia82@gmail.com`. El plan gratuito permite 50 mensajes al mes.
+
+El primer envío requiere confirmar el formulario desde el correo que manda Formspree — haz una prueba tú mismo cuando el sitio esté publicado.
 
 ### Datos de contacto
 
