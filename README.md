@@ -59,8 +59,8 @@ La cuenta es `owner=39977052` y los enlaces reales ya están conectados en el si
 
 | Botón / lugar | Tipo de cita | appointmentType |
 |---|---|---|
-| "Agenda tu consulta gratis" (tarjeta + CTA final de `servicios.html`, y resultado del quiz) | Consulta inicial | `96427185` |
-| "Reservar sesión de arranque" | Sesión de arranque | `96429754` |
+| "Agenda tu consulta gratis" (tarjeta + CTA final de `servicios.html`, y resultado del quiz) | Consulta inicial | `96429754` |
+| "Reservar sesión de arranque" | Sesión de arranque | `96427185` |
 | "Reservar el Plan Jubileo" | Plan Jubileo | `96431144` |
 | "Reservar acompañamiento" | Acompañamiento de 3 meses | `96431666` |
 | "Reservar seguimiento" | Sesión de seguimiento | `96431733` |
