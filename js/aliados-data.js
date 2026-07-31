@@ -80,6 +80,7 @@ window.ALIADOS = [
     profesionales: [
       {
         nombre: "DGS Medicare Consultants",
+        logo: { src: "img/dgs-business-solutions.png", alt: "Logo de DGS Medicare Consultants" },
         especialidad: "Corredores de seguros de salud con licencia: Medicare, GetCoveredNJ, discapacidad y menores de 65 años",
         ciudad: "Fair Lawn y Freehold, NJ",
         idioma: "Español e inglés",
