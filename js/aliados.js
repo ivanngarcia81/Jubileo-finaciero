@@ -37,6 +37,15 @@
         var item = document.createElement("li");
         item.className = "aliado__profesional";
 
+        if (pro.logo && pro.logo.src) {
+          var logo = document.createElement("img");
+          logo.className = "aliado__logo";
+          logo.src = pro.logo.src;
+          logo.alt = pro.logo.alt || pro.nombre;
+          logo.loading = "lazy";
+          item.appendChild(logo);
+        }
+
         var nombre = document.createElement("strong");
         nombre.textContent = pro.nombre;
         item.appendChild(nombre);

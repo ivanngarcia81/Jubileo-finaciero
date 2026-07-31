@@ -1470,6 +1470,13 @@ p { margin-bottom: 1rem; }
   gap: 0.9rem;
 }
 
+.aliado__logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin-bottom: 0.6rem;
+}
+
 .aliado__profesional strong {
   display: block;
   color: var(--carbon);
