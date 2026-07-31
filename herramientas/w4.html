@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Te retienen demasiados impuestos? Chequeo de tu W-4 — Jubileo Financiero</title>
+  <meta name="description" content="Descubre si te descuentan demasiados impuestos del sueldo y aprende cómo ajustar tu W-4 para tener más dinero en cada cheque. Herramienta educativa, gratis y en español.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="¿Te retienen demasiados impuestos? Chequeo de tu W-4 — Jubileo Financiero">
+  <meta property="og:description" content="Un reembolso grande no es un premio: es dinero tuyo prestado al gobierno sin intereses. Revisa tu retención y aprende a ajustar tu W-4.">
+  <meta property="og:url" content="https://jubileofinanciero.com/herramientas/w4.html">
+  <link rel="canonical" href="https://jubileofinanciero.com/herramientas/w4.html">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://jubileofinanciero.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¿Te retienen demasiados impuestos? Chequeo de tu W-4 — Jubileo Financiero">
+  <meta name="twitter:description" content="Un reembolso grande no es un premio: es dinero tuyo prestado al gobierno sin intereses. Revisa tu retención y aprende a ajustar tu W-4.">
+  <meta name="twitter:image" content="https://jubileofinanciero.com/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="pagina">
+
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="contenedor header__inner">
+      <a class="logo" href="../index.html" aria-label="Jubileo Financiero — Inicio">
+        <svg class="logo__icono" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="#0C0F10" stroke-width="2"/>
+          <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+        Jubileo Financiero
+      </a>
+      <button class="hamburguesa" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menú de navegación">
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+        <span class="hamburguesa__linea"></span>
+      </button>
+      <nav class="nav" id="nav-principal" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="../index.html">Inicio</a></li>
+          <li><a class="nav__enlace" href="../sobre-mi.html">Sobre mí</a></li>
+          <li><a class="nav__enlace" href="../servicios.html">Servicios</a></li>
+          <li><a class="nav__enlace" href="../herramientas.html" aria-current="page">Herramientas</a></li>
+          <li><a class="nav__enlace" href="../iglesias.html">Iglesias</a></li>
+          <li><a class="nav__enlace" href="../aliados.html">Red de aliados</a></li>
+          <li><a class="nav__enlace" href="../blog.html">Blog</a></li>
+          <li><a class="nav__enlace" href="../contacto.html">Contacto</a></li>
+          <li class="nav__cta"><a class="boton boton--primario" href="../contacto.html#agendar">Agenda tu consulta gratis</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero">
+      <div class="contenedor">
+        <span class="etiqueta etiqueta--teal">Herramientas · Calculadora</span>
+        <h1>¿Te retienen <span class="hero__destacado">demasiados impuestos</span>?</h1>
+        <p class="hero__texto">Muchas familias festejan un reembolso grande en abril sin saber que es dinero suyo que le prestaron al gobierno todo el año, sin intereses. Con tus propios números te digo si tu retención va equilibrada y cómo ajustar tu W-4 para tener más en cada cheque.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor contacto-rejilla">
+
+        <!-- Formulario -->
+        <form class="tarjeta" id="w4-formulario" novalidate>
+          <span class="etiqueta">Tus números del año pasado</span>
+          <h2 style="margin-bottom: 1.25rem;">¿Cómo te fue en tu declaración?</h2>
+
+          <div class="formulario__grupo">
+            <span class="w4-leyenda" id="w4-leyenda">Resultado de tu declaración de impuestos</span>
+            <div class="w4-opciones" role="radiogroup" aria-labelledby="w4-leyenda">
+              <label class="w4-opcion"><input type="radio" name="resultado" value="devuelto" checked> Me devolvieron dinero (reembolso)</label>
+              <label class="w4-opcion"><input type="radio" name="resultado" value="pagado"> Tuve que pagar al IRS</label>
+              <label class="w4-opcion"><input type="radio" name="resultado" value="cero"> Quedó en casi cero</label>
+            </div>
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="w4-monto">¿De cuánto? (monto en dólares)</label>
+            <input type="number" id="w4-monto" name="monto" min="0" step="1" inputmode="decimal" placeholder="Ej. 2400">
+            <p class="formulario__nota">Si quedó en casi cero, puedes dejarlo en blanco.</p>
+          </div>
+
+          <div class="formulario__grupo">
+            <label for="w4-frecuencia">¿Cada cuánto te pagan?</label>
+            <select id="w4-frecuencia" name="frecuencia" required>
+              <option value="26">Cada dos semanas (bi-weekly)</option>
+              <option value="24">Dos veces al mes</option>
+              <option value="52">Cada semana</option>
+              <option value="12">Una vez al mes</option>
+            </select>
+          </div>
+
+          <button type="submit" class="boton boton--primario boton--bloque">Revisar mi retención</button>
+          <p class="quiz__error" id="w4-error" hidden>Elige un resultado y escribe un monto válido (0 o más).</p>
+        </form>
+
+        <!-- Resultado -->
+        <div>
+          <div class="w4-salida" id="w4-salida" hidden aria-live="polite">
+            <div class="tarjeta">
+              <span class="etiqueta">Tu resultado</span>
+              <p class="w4-cifra" id="w4-titulo">—</p>
+              <p id="w4-mensaje" style="margin-bottom: 0;"></p>
+            </div>
+
+            <div class="tarjeta tarjeta--oscura" id="w4-ahorro" hidden>
+              <span class="etiqueta etiqueta--teal">Ese dinero es tuyo</span>
+              <p style="margin-bottom: 0.25rem;">Con la retención justa, podrías tener en tu bolsillo:</p>
+              <p class="w4-cifra w4-cifra--teal" id="w4-permes">—</p>
+              <p id="w4-percheque" style="margin-bottom: 0;"></p>
+            </div>
+
+            <div class="tarjeta">
+              <span class="etiqueta">Qué hacer</span>
+              <h3>Cómo ajustar tu W-4</h3>
+              <p>El <strong>W-4</strong> (Employee's Withholding Certificate) es el formulario que le das a tu empleador y que decide cuánto te retienen de cada cheque. Puedes cambiarlo cuando quieras durante el año.</p>
+              <p><strong>Si te retienen de más</strong> (te devuelven mucho): reclama a tus dependientes en el <strong>Paso 3</strong>, anota deducciones grandes en el <strong>Paso 4(b)</strong>, y si antes pediste retención adicional en el <strong>Paso 4(c)</strong>, redúcela o quítala.</p>
+              <p><strong>Si te retienen de menos</strong> (debiste al IRS): en el <strong>Paso 4(c)</strong>, "Extra withholding", pon un monto adicional por cheque, o reduce lo que reclamaste en el Paso 3.</p>
+              <p>Para saber exactamente qué poner en cada casilla, usa el <a href="https://www.irs.gov/es/individuals/tax-withholding-estimator" rel="noopener" target="_blank">estimador oficial del IRS</a> (gratis y en español). Luego entrega el W-4 actualizado a Recursos Humanos o a quien maneja la nómina.</p>
+              <p class="w4-descargo">Esta herramienta es educativa y usa tus propios números; no es asesoría fiscal ni un cálculo oficial. Para tu situación exacta, apóyate en el estimador del IRS o en un preparador de impuestos de confianza — como los de nuestra <a href="../aliados.html">Red de aliados</a>.</p>
+            </div>
+          </div>
+
+          <div class="tarjeta" id="w4-intro">
+            <span class="etiqueta">Cómo funciona</span>
+            <h3>Tu reembolso te da la pista</h3>
+            <p>Si el año pasado te devolvieron mucho, es señal de que te retienen de más y estás recibiendo tu propio dinero un año tarde. Si debiste bastante, te retienen de menos. Con ese dato te oriento y te muestro cómo ajustarlo.</p>
+            <p style="margin-bottom: 0;">Nada de esto sale de tu navegador: los cálculos se hacen aquí mismo y no se envían a ningún servidor.</p>
+          </div>
+
+          <noscript>
+            <p class="tarjeta" style="margin-top: 1.25rem;">Esta calculadora necesita JavaScript. Actívalo en tu navegador o <a href="../contacto.html">escríbeme</a> y lo revisamos juntos en una sesión.</p>
+          </noscript>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA final ===== -->
+    <section class="seccion--oscura cta-final">
+      <div class="contenedor">
+        <span class="etiqueta etiqueta--teal">Que tu dinero trabaje para ti</span>
+        <h2>Ajustar tu retención es solo el principio</h2>
+        <p>En una sesión de coaching convertimos ese dinero extra de cada cheque en un plan: fondo de emergencia, salida de deudas y metas con propósito.</p>
+        <a class="boton boton--teal" href="../contacto.html#agendar">Agenda tu consulta gratis</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__rejilla">
+        <div>
+          <p class="footer__marca">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="15" stroke="#FFFFFF" stroke-width="2"/>
+              <path d="M9 20 L14 14 L18 17 L23 10" stroke="#0FBFA6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            Jubileo Financiero
+          </p>
+          <p>Coaching financiero personal en español. Un plan probado para salir de deudas, presupuestar con propósito y construir libertad.</p>
+        </div>
+        <nav aria-label="Navegación">
+          <h2 class="footer__titulo">Navegación</h2>
+          <ul class="footer__lista">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../sobre-mi.html">Sobre mí</a></li>
+            <li><a href="../servicios.html">Servicios</a></li>
+            <li><a href="../iglesias.html">Iglesias</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Recursos">
+          <h2 class="footer__titulo">Recursos</h2>
+          <ul class="footer__lista">
+            <li><a href="../herramientas.html">Herramientas</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../aliados.html">Red de aliados</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Legal">
+          <h2 class="footer__titulo">Legal</h2>
+          <ul class="footer__lista footer__lista--legal">
+            <li><a href="../privacidad.html">Aviso de privacidad</a></li>
+            <li><a href="../terminos.html">Términos del servicio</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__titulo">Contacto</h2>
+          <ul class="footer__lista">
+            <li><a href="mailto:hola@jubileofinanciero.com">hola@jubileofinanciero.com</a></li>
+            <li><a href="https://wa.me/18622732134?text=Hola%20Iv%C3%A1n%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20coaching" rel="noopener">WhatsApp</a></li>
+            <li><a href="../contacto.html#agendar">Agendar una sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer__descargo">Jubileo Financiero es una práctica independiente. Iván García es un coach financiero entrenado por Ramsey Solutions, pero no es empleado de Ramsey Solutions ni habla en su nombre.</p>
+      <p class="footer__copy">© <span id="anio-actual">2026</span> Jubileo Financiero. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</div>
+<script src="../js/main.js"></script>
+<script src="../js/w4.js"></script>
+</body>
+</html>
