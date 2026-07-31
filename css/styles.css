@@ -1685,10 +1685,21 @@ p { margin-bottom: 1rem; }
   margin-bottom: 2.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 560px) {
   .footer__rejilla {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 960px) {
+  .footer__rejilla {
+    grid-template-columns: 1.6fr repeat(4, 1fr);
+  }
+}
+
+/* Enlaces legales: algo más pequeños, pero con el mismo contraste del footer */
+.footer__lista--legal {
+  font-size: 0.85rem;
 }
 
 .footer__marca {
