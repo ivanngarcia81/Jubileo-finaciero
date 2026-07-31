@@ -1558,6 +1558,70 @@ p { margin-bottom: 1rem; }
   font-weight: 600;
 }
 
+/* ---------- Herramienta W-4 / retención ---------- */
+
+.w4-salida {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.w4-leyenda {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+}
+
+.w4-opciones {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.w4-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.w4-opcion input {
+  accent-color: var(--teal);
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.w4-cifra {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--carbon);
+  line-height: 1.15;
+  margin: 0.25rem 0 0.6rem;
+}
+
+.w4-cifra--teal {
+  color: var(--teal-oscuro);
+}
+
+.tarjeta--oscura .w4-cifra--teal {
+  color: var(--teal);
+}
+
+.w4-descargo {
+  font-size: 0.82rem;
+  color: var(--gris-texto);
+  border-top: 1px solid var(--gris-borde);
+  padding-top: 1rem;
+  margin: 0.5rem 0 0;
+}
+
+.w4-descargo a {
+  color: var(--teal-oscuro);
+}
+
 /* ---------- Movimiento reducido ---------- */
 
 @media (prefers-reduced-motion: reduce) {
