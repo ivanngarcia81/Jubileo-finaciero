@@ -8,9 +8,10 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Herramientas gratuitas — Jubileo Financiero">
   <meta property="og:description" content="Diagnóstico financiero, reto de 30 días sin gastos hormiga, planificador de remesas y guía sobre el crédito.">
-  <meta property="og:url" content="https://www.jubileofinanciero.com/herramientas.html">
+  <meta property="og:url" content="https://jubileofinanciero.com/herramientas.html">
+  <link rel="canonical" href="https://jubileofinanciero.com/herramientas.html">
   <meta property="og:locale" content="es_LA">
-  <meta property="og:image" content="https://www.jubileofinanciero.com/og-image.png">
+  <meta property="og:image" content="https://jubileofinanciero.com/og-image.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -123,6 +124,32 @@
       </div>
     </section>
 
+    <!-- ===== Suscripción al boletín ===== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="suscripcion">
+          <span class="etiqueta etiqueta--teal">Boletín</span>
+          <h2>Recibe las ideas antes que nadie</h2>
+          <p class="suscripcion__texto">Un correo al mes con lo práctico: presupuesto, deudas y propósito. Sin spam y te puedes salir cuando quieras.</p>
+          <!-- TODO: conectar a Mailchimp / MailerLite -->
+          <form class="suscripcion__formulario" action="#" method="post">
+            <div class="suscripcion__fila">
+              <div class="suscripcion__campo">
+                <label for="susc-nombre">Nombre (opcional)</label>
+                <input type="text" id="susc-nombre" name="nombre" autocomplete="name">
+              </div>
+              <div class="suscripcion__campo">
+                <label for="susc-email">Correo electrónico</label>
+                <input type="email" id="susc-email" name="email" autocomplete="email" required>
+              </div>
+            </div>
+            <button class="boton boton--primario boton--bloque" type="submit">Quiero recibirlo</button>
+          </form>
+          <p class="suscripcion__nota">Consulta nuestro <a href="privacidad.html">aviso de privacidad</a>.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ===== Footer ===== -->
@@ -155,14 +182,15 @@
         <div>
           <h2 class="footer__titulo">Contacto</h2>
           <ul class="footer__lista">
-            <li><a href="mailto:ivanngarcia82@gmail.com">ivanngarcia82@gmail.com</a></li>
+            <li><a href="mailto:hola@jubileofinanciero.com">hola@jubileofinanciero.com</a></li>
+            <li><a href="https://wa.me/18622732134?text=Hola%20Iv%C3%A1n%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20coaching" rel="noopener">WhatsApp</a></li>
             <li><a href="contacto.html#agendar">Agendar una sesión</a></li>
             <li><a href="privacidad.html">Aviso de privacidad</a></li>
           </ul>
         </div>
       </div>
       <p class="footer__descargo">Jubileo Financiero es una práctica independiente. Iván García es un coach financiero entrenado por Ramsey Solutions, pero no es empleado de Ramsey Solutions ni habla en su nombre.</p>
-      <p class="footer__copy">© <span id="anio-actual">2025</span> Jubileo Financiero. Todos los derechos reservados.</p>
+      <p class="footer__copy">© <span id="anio-actual">2026</span> Jubileo Financiero. Todos los derechos reservados.</p>
     </div>
   </footer>
 

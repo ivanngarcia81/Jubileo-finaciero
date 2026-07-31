@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Reemplaza https://www.jubileofinanciero.com con tu dominio real -->
+<!-- Reemplaza https://jubileofinanciero.com con tu dominio real -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.jubileofinanciero.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/sobre-mi.html</loc><priority>0.8</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/servicios.html</loc><priority>0.9</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/herramientas.html</loc><priority>0.8</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/herramientas/diagnostico.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/herramientas/reto-30-dias.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/herramientas/remesas.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/herramientas/credito.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/iglesias.html</loc><priority>0.8</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/aliados.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/blog.html</loc><priority>0.7</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/blog/comportamiento-y-deudas.html</loc><priority>0.6</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/blog/presupuesto-base-cero.html</loc><priority>0.6</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/blog/perspectiva-biblica-del-dinero.html</loc><priority>0.6</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/contacto.html</loc><priority>0.9</priority></url>
-  <url><loc>https://www.jubileofinanciero.com/privacidad.html</loc><priority>0.3</priority></url>
+  <url><loc>https://jubileofinanciero.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://jubileofinanciero.com/sobre-mi.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jubileofinanciero.com/servicios.html</loc><priority>0.9</priority></url>
+  <url><loc>https://jubileofinanciero.com/herramientas.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jubileofinanciero.com/herramientas/diagnostico.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jubileofinanciero.com/herramientas/reto-30-dias.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jubileofinanciero.com/herramientas/remesas.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jubileofinanciero.com/herramientas/credito.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jubileofinanciero.com/iglesias.html</loc><priority>0.8</priority></url>
+  <url><loc>https://jubileofinanciero.com/aliados.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jubileofinanciero.com/blog.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jubileofinanciero.com/blog/esposos-de-acuerdo-para-salir-de-deudas.html</loc><priority>0.6</priority></url>
+  <url><loc>https://jubileofinanciero.com/blog/comportamiento-y-deudas.html</loc><priority>0.6</priority></url>
+  <url><loc>https://jubileofinanciero.com/blog/presupuesto-base-cero.html</loc><priority>0.6</priority></url>
+  <url><loc>https://jubileofinanciero.com/blog/perspectiva-biblica-del-dinero.html</loc><priority>0.6</priority></url>
+  <url><loc>https://jubileofinanciero.com/contacto.html</loc><priority>0.9</priority></url>
+  <url><loc>https://jubileofinanciero.com/privacidad.html</loc><priority>0.3</priority></url>
 </urlset>

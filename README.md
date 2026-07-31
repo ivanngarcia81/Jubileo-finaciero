@@ -73,14 +73,14 @@ Si algún día cambias un tipo de cita en Acuity y su ID cambia, busca el númer
 
 ### Formspree (ya configurado)
 
-El formulario de `contacto.html` envía a `https://formspree.io/f/mnjerbby`, que entrega los mensajes a `ivanngarcia82@gmail.com`. El plan gratuito permite 50 mensajes al mes.
+El formulario de `contacto.html` envía a `https://formspree.io/f/mnjerbby`, que entrega los mensajes a `hola@jubileofinanciero.com`. El plan gratuito permite 50 mensajes al mes.
 
 El primer envío requiere confirmar el formulario desde el correo que manda Formspree — haz una prueba tú mismo cuando el sitio esté publicado.
 
 ### Datos de contacto
 
 Ya configurados en `contacto.html` y en el footer de todas las páginas:
-- Correo: `ivanngarcia82@gmail.com`.
+- Correo: `hola@jubileofinanciero.com`.
 - WhatsApp: `+1 (862) 273-2134` (con enlace directo a wa.me).
 - Si cambias alguno, busca el valor actual en todos los archivos HTML y reemplázalo. El horario de atención se edita en `contacto.html`.
 
