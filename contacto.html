@@ -10,8 +10,12 @@
   <meta property="og:description" content="Escríbenos o agenda tu sesión de coaching financiero en línea.">
   <meta property="og:url" content="https://jubileofinanciero.com/contacto.html">
   <link rel="canonical" href="https://jubileofinanciero.com/contacto.html">
-  <meta property="og:locale" content="es_LA">
+  <meta property="og:locale" content="es_ES">
   <meta property="og:image" content="https://jubileofinanciero.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto y agenda — Jubileo Financiero">
+  <meta name="twitter:description" content="Escríbenos o agenda tu sesión de coaching financiero en línea.">
+  <meta name="twitter:image" content="https://jubileofinanciero.com/og-image.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,6 +81,9 @@
             <!-- Redirige a la página de gracias tras el envío.
                  Reemplaza el valor con la URL completa de tu dominio real. -->
             <input type="hidden" name="_next" value="https://jubileofinanciero.com/gracias.html">
+            <!-- Honeypot anti-spam de Formspree: si un bot rellena este campo oculto,
+                 Formspree descarta el envío. Las personas no lo ven ni lo tabulan. -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;">
             <div class="formulario__grupo">
               <label for="nombre">Nombre</label>
               <input type="text" id="nombre" name="nombre" autocomplete="name" required>
@@ -90,6 +97,7 @@
               <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
             </div>
             <button class="boton boton--primario" type="submit">Enviar mensaje</button>
+            <p class="formulario__nota">Al enviar este formulario aceptas nuestro <a href="privacidad.html">aviso de privacidad</a>.</p>
             <p class="formulario__nota">Respondo normalmente en 1–2 días hábiles. Tu información no se comparte con nadie.</p>
           </form>
         </div>
@@ -116,7 +124,7 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
               <div>
                 <strong>Horario de atención</strong>
-                <span>Lunes a viernes, 9:00 a.m. – 6:00 p.m.</span>
+                <span>Lunes a viernes, 9:00 a.m. – 6:00 p.m. (hora del Este, ET)</span>
               </div>
             </div>
           </div>
@@ -186,6 +194,7 @@
             <li><a href="https://wa.me/18622732134?text=Hola%20Iv%C3%A1n%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20coaching" rel="noopener">WhatsApp</a></li>
             <li><a href="contacto.html#agendar">Agendar una sesión</a></li>
             <li><a href="privacidad.html">Aviso de privacidad</a></li>
+            <li><a href="terminos.html">Términos del servicio</a></li>
           </ul>
         </div>
       </div>

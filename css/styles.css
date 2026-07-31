@@ -1496,6 +1496,69 @@ p { margin-bottom: 1rem; }
   font-weight: 600;
 }
 
+/* El atributo [hidden] debe ganarle a display:flex de .aliado al filtrar */
+.aliado[hidden] {
+  display: none;
+}
+
+/* Cuerpo de la tarjeta (profesionales o mensaje "en formación") al pie */
+.aliado__cuerpo {
+  margin-top: auto;
+}
+
+.aliado__vacio {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gris-borde);
+  font-size: 0.9rem;
+  color: var(--gris-texto);
+}
+
+.aliado__vacio a {
+  color: var(--teal-oscuro);
+  font-weight: 600;
+}
+
+/* Filtro de la red de aliados */
+.aliados-filtro {
+  margin-bottom: 1.75rem;
+}
+
+.aliados-filtro label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: 0.4rem;
+}
+
+.aliados-filtro__input {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio-sm);
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--texto);
+  background-color: var(--blanco);
+}
+
+.aliados-filtro__input:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 1px;
+}
+
+.aliados-sin-resultados {
+  margin-top: 1.5rem;
+  color: var(--gris-texto);
+}
+
+.aliados-sin-resultados a {
+  color: var(--teal-oscuro);
+  font-weight: 600;
+}
+
 /* ---------- Movimiento reducido ---------- */
 
 @media (prefers-reduced-motion: reduce) {
