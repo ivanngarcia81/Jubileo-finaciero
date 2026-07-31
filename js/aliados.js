@@ -1,41 +1,35 @@
 /* Jubileo Financiero — Red de profesionales aliados
-   Pinta las tarjetas de categorías a partir de window.ALIADOS
-   (definido en js/aliados-data.js). Sin dependencias.
-
-   Estados por categoría:
-   - profesionales vacío (o estado "en-formacion"): badge "Red en formación".
-   - profesionales con elementos: lista de cada profesional con nombre,
-     especialidad, ciudad, idioma y enlace de contacto. */
+   El contenido base de las categorías es HTML estático (indexable) en aliados.html.
+   Este archivo SOLO mejora la página:
+     1) Cuando una categoría de js/aliados-data.js tiene profesionales, los inyecta
+        en su tarjeta (reemplazando el mensaje "en formación").
+     2) Habilita un filtro de búsqueda accesible (teclado y touch) sobre las tarjetas.
+   Sin JavaScript, todas las categorías se ven igual y siguen siendo indexables. */
 
 (function () {
   "use strict";
 
-  var contenedor = document.getElementById("aliados-lista");
-  if (!contenedor || !Array.isArray(window.ALIADOS)) return;
+  // Quita acentos y pasa a minúsculas para comparar de forma tolerante.
+  function normalizar(texto) {
+    return (texto || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "");
+  }
 
-  window.ALIADOS.forEach(function (cat) {
-    var tarjeta = document.createElement("article");
-    tarjeta.className = "tarjeta aliado";
+  // ---- 1) Inyecta los profesionales que existan en los datos ----
+  if (Array.isArray(window.ALIADOS)) {
+    window.ALIADOS.forEach(function (cat) {
+      var tieneProfesionales =
+        Array.isArray(cat.profesionales) && cat.profesionales.length > 0;
+      if (!tieneProfesionales) return;
 
-    var titulo = document.createElement("h3");
-    titulo.textContent = cat.categoria;
-    tarjeta.appendChild(titulo);
+      var tarjeta = document.getElementById("aliado-" + cat.id);
+      if (!tarjeta) return;
+      var cuerpo = tarjeta.querySelector("[data-cuerpo]");
+      if (!cuerpo) return;
 
-    var cuando = document.createElement("p");
-    cuando.textContent = cat.cuandoRefiero;
-    tarjeta.appendChild(cuando);
-
-    var credencial = document.createElement("p");
-    credencial.className = "aliado__credencial";
-    var rotulo = document.createElement("strong");
-    rotulo.textContent = "Qué credencial verifico: ";
-    credencial.appendChild(rotulo);
-    credencial.appendChild(document.createTextNode(cat.credencial));
-    tarjeta.appendChild(credencial);
-
-    var tieneProfesionales = Array.isArray(cat.profesionales) && cat.profesionales.length > 0;
-
-    if (tieneProfesionales) {
+      cuerpo.innerHTML = "";
       var lista = document.createElement("ul");
       lista.className = "aliado__profesionales";
 
@@ -67,14 +61,42 @@
         lista.appendChild(item);
       });
 
-      tarjeta.appendChild(lista);
-    } else {
-      var insignia = document.createElement("span");
-      insignia.className = "aliado__insignia";
-      insignia.textContent = "Red en formación";
-      tarjeta.appendChild(insignia);
-    }
+      cuerpo.appendChild(lista);
+    });
+  }
 
-    contenedor.appendChild(tarjeta);
+  // ---- 2) Filtro de búsqueda accesible ----
+  var filtro = document.querySelector("[data-aliados-filtro]");
+  var input = document.getElementById("aliados-buscar");
+  var tarjetas = Array.prototype.slice.call(
+    document.querySelectorAll("#aliados-lista [data-aliado]")
+  );
+  var sinResultados = document.querySelector("[data-sin-resultados]");
+
+  if (!filtro || !input || !tarjetas.length) return;
+
+  // El filtro solo tiene sentido con JS: se revela ahora.
+  filtro.hidden = false;
+
+  function aplicarFiltro() {
+    var q = normalizar(input.value.trim());
+    var visibles = 0;
+
+    tarjetas.forEach(function (tarjeta) {
+      var coincide = q === "" || normalizar(tarjeta.textContent).indexOf(q) !== -1;
+      tarjeta.hidden = !coincide;
+      if (coincide) visibles++;
+    });
+
+    if (sinResultados) sinResultados.hidden = visibles !== 0;
+  }
+
+  input.addEventListener("input", aplicarFiltro);
+  // Escape limpia el filtro rápidamente con el teclado.
+  input.addEventListener("keydown", function (evento) {
+    if (evento.key === "Escape") {
+      input.value = "";
+      aplicarFiltro();
+    }
   });
 })();

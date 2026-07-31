@@ -72,12 +72,101 @@
     <!-- ===== Categorías ===== -->
     <section class="seccion">
       <div class="contenedor">
-        <div class="rejilla rejilla--3" id="aliados-lista">
-          <!-- Las tarjetas de categorías se pintan desde js/aliados-data.js -->
+        <!-- Filtro (solo aparece con JavaScript; sin JS todas las categorías se ven igual). -->
+        <div class="aliados-filtro" hidden data-aliados-filtro>
+          <label for="aliados-buscar">Filtrar por categoría</label>
+          <input type="search" id="aliados-buscar" class="aliados-filtro__input" placeholder="Escribe para filtrar: impuestos, seguros, hipotecas…" autocomplete="off" aria-describedby="aliados-sin-resultados">
         </div>
-        <noscript>
-          <p class="tarjeta">Esta sección necesita JavaScript para mostrar las categorías de la red. Si no puedes activarlo, <a href="contacto.html">escríbeme</a> y con gusto te comparto la referencia que necesites.</p>
-        </noscript>
+
+        <!-- Contenido base en HTML estático (indexable). js/aliados.js solo mejora
+             el filtrado y, cuando existan, inyecta los profesionales de cada categoría
+             desde js/aliados-data.js. -->
+        <div class="rejilla rejilla--3" id="aliados-lista">
+
+          <article class="tarjeta aliado" id="aliado-inversiones" data-aliado>
+            <h3>Inversiones y retiro</h3>
+            <p>Cuando ya estás libre de deudas de consumo, tienes tu fondo de emergencia completo y toca decidir en qué invertir.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Asesor de inversiones registrado (IAR/RIA) o CFP®. Verificable en adviserinfo.sec.gov.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-hipotecas" data-aliado>
+            <h3>Hipotecas</h3>
+            <p>Cuando ya estás listo para precalificar y necesitas comparar opciones reales.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Oficial de préstamos con licencia NMLS. Verificable en NMLS Consumer Access.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-bienes-raices" data-aliado>
+            <h3>Bienes raíces</h3>
+            <p>Cuando ya tienes la entrada ahorrada y sales a buscar casa.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Agente con licencia estatal, con experiencia en compradores por primera vez.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-impuestos" data-aliado>
+            <h3>Impuestos</h3>
+            <p>Si trabajas por cuenta propia, tienes ITIN, debes dinero al IRS o necesitas un plan de pagos.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>CPA o Enrolled Agent con PTIN vigente.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-seguros" data-aliado>
+            <h3>Seguros</h3>
+            <p>Cuando necesitas proteger a tu familia: vida a término, discapacidad, salud, auto y hogar.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Agente independiente con licencia estatal de seguros.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-legal" data-aliado>
+            <h3>Asuntos legales</h3>
+            <p>Demandas de cobranza, embargo de salario, bancarrota, contratos.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Abogado con licencia activa en tu estado. Verificable con el colegio de abogados estatal.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-testamento" data-aliado>
+            <h3>Testamento y herencia</h3>
+            <p>Cuando quieres dejar tu casa en orden para los tuyos.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Abogado de planificación patrimonial.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-inmigracion" data-aliado>
+            <h3>Inmigración</h3>
+            <p>Cuando tu situación migratoria afecta tus decisiones de dinero, trabajo o crédito.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Abogado de inmigración o representante acreditado por el Departamento de Justicia. Nunca un notario público.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta aliado" id="aliado-salud-emocional" data-aliado>
+            <h3>Salud emocional y familiar</h3>
+            <p>Cuando detrás del gasto hay ansiedad, compra compulsiva, ludopatía o una crisis de pareja que va más allá del dinero.</p>
+            <p class="aliado__credencial"><strong>Qué credencial verifico: </strong>Consejero o terapeuta con licencia estatal.</p>
+            <div class="aliado__cuerpo" data-cuerpo>
+              <p class="aliado__vacio">Estamos incorporando aliados en esta área. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="aliados-sin-resultados" id="aliados-sin-resultados" role="status" hidden data-sin-resultados>No encontramos una categoría con ese término. <a href="contacto.html">Escríbenos</a> y te orientamos.</p>
       </div>
     </section>
 
