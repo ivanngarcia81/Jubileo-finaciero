@@ -47,16 +47,22 @@
           .join(" · ");
         item.appendChild(detalle);
 
-        if (pro.contacto) {
+        // Uno o varios enlaces de contacto.
+        var contactos = Array.isArray(pro.contactos)
+          ? pro.contactos
+          : (pro.contacto ? [{ href: pro.contacto, texto: "Contactar a " + pro.nombre }] : []);
+
+        contactos.forEach(function (cto) {
+          if (!cto || !cto.href) return;
           var enlace = document.createElement("a");
-          enlace.href = pro.contacto;
-          enlace.textContent = "Contactar a " + pro.nombre;
-          if (/^https?:/.test(pro.contacto)) {
+          enlace.href = cto.href;
+          enlace.textContent = cto.texto || cto.href;
+          if (/^https?:/.test(cto.href)) {
             enlace.rel = "noopener";
             enlace.target = "_blank";
           }
           item.appendChild(enlace);
-        }
+        });
 
         lista.appendChild(item);
       });
