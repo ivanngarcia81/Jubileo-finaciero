@@ -833,8 +833,6 @@ p { margin-bottom: 1rem; }
   color: var(--carbon);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   padding: 0.3rem 0.9rem;
   border-radius: 999px;
   white-space: nowrap;
@@ -906,8 +904,6 @@ p { margin-bottom: 1rem; }
 
 .articulo-tarjeta__fecha {
   font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--gris);
   margin-bottom: 0.6rem;
 }
@@ -955,8 +951,6 @@ p { margin-bottom: 1rem; }
 
 .articulo__meta {
   font-size: 0.82rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--gris);
   margin-bottom: 2rem;
 }
@@ -1277,8 +1271,6 @@ p { margin-bottom: 1rem; }
 .reto__dia-numero {
   display: block;
   font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--gris);
 }
 
@@ -1453,8 +1445,6 @@ p { margin-bottom: 1rem; }
   color: var(--teal-oscuro);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   padding: 0.3rem 0.85rem;
   border-radius: 999px;
   margin-top: auto;
@@ -1615,8 +1605,6 @@ p { margin-bottom: 1rem; }
 .tabla-resumen thead th {
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
   color: var(--gris);
 }
 
@@ -1697,10 +1685,21 @@ p { margin-bottom: 1rem; }
   margin-bottom: 2.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 560px) {
   .footer__rejilla {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 960px) {
+  .footer__rejilla {
+    grid-template-columns: 1.6fr repeat(4, 1fr);
+  }
+}
+
+/* Enlaces legales: algo más pequeños, pero con el mismo contraste del footer */
+.footer__lista--legal {
+  font-size: 0.85rem;
 }
 
 .footer__marca {
@@ -1717,8 +1716,6 @@ p { margin-bottom: 1rem; }
 .footer__titulo {
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 1rem;
 }
