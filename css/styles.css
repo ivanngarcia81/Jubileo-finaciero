@@ -1482,8 +1482,10 @@ p { margin-bottom: 1rem; }
 }
 
 .aliado__profesional a {
+  display: inline-block;
   font-size: 0.9rem;
   font-weight: 600;
+  margin-right: 1.1rem;
 }
 
 /* El atributo [hidden] debe ganarle a display:flex de .aliado al filtrar */

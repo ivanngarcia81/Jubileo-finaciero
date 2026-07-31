@@ -63,7 +63,10 @@ window.ALIADOS = [
         especialidad: "Income tax (personal, LLC y corporativo), bookkeeping, payroll y apertura de negocio. También traducciones y llenado de formularios oficiales (servicio de notario público, solo para completar trámites; no es asesoría legal)",
         ciudad: "Fair Lawn y Freehold, NJ",
         idioma: "Español e inglés",
-        contacto: "https://wa.me/12013970580"
+        contactos: [
+          { href: "https://wa.me/12013970580", texto: "WhatsApp" },
+          { href: "mailto:dgsbusinesssolutions@gmail.com", texto: "Correo" }
+        ]
       }
     ]
   },
@@ -79,7 +82,10 @@ window.ALIADOS = [
         especialidad: "Corredores de seguros de salud con licencia: Medicare, GetCoveredNJ, discapacidad y menores de 65 años",
         ciudad: "Fair Lawn y Freehold, NJ",
         idioma: "Español e inglés",
-        contacto: "https://wa.me/12013970580"
+        contactos: [
+          { href: "https://wa.me/12013970580", texto: "WhatsApp" },
+          { href: "mailto:dgsbusinesssolutions@gmail.com", texto: "Correo" }
+        ]
       }
     ]
   },
