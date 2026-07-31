@@ -55,17 +55,33 @@ window.ALIADOS = [
     id: "impuestos",
     categoria: "Impuestos",
     cuandoRefiero: "Si trabajas por cuenta propia, tienes ITIN, debes dinero al IRS o necesitas un plan de pagos.",
-    credencial: "CPA o Enrolled Agent con PTIN vigente.",
-    estado: "en-formacion",
-    profesionales: []
+    credencial: "Preparador de impuestos con PTIN vigente; CPA o Enrolled Agent para los casos que lo requieran.",
+    estado: "activo",
+    profesionales: [
+      {
+        nombre: "DGS Business Solutions",
+        especialidad: "Income tax (personal, LLC y corporativo), bookkeeping, payroll y apertura de negocio. También traducciones y llenado de formularios oficiales (servicio de notario público, solo para completar trámites; no es asesoría legal)",
+        ciudad: "Fair Lawn y Freehold, NJ",
+        idioma: "Español e inglés",
+        contacto: "https://wa.me/12013970580"
+      }
+    ]
   },
   {
     id: "seguros",
     categoria: "Seguros",
     cuandoRefiero: "Cuando necesitas proteger a tu familia: vida a término, discapacidad, salud, auto y hogar.",
     credencial: "Agente independiente con licencia estatal de seguros.",
-    estado: "en-formacion",
-    profesionales: []
+    estado: "activo",
+    profesionales: [
+      {
+        nombre: "DGS Medicare Consultants",
+        especialidad: "Corredores de seguros de salud con licencia: Medicare, GetCoveredNJ, discapacidad y menores de 65 años",
+        ciudad: "Fair Lawn y Freehold, NJ",
+        idioma: "Español e inglés",
+        contacto: "https://wa.me/12013970580"
+      }
+    ]
   },
   {
     id: "legal",
