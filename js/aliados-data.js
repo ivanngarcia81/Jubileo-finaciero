@@ -61,7 +61,7 @@ window.ALIADOS = [
       {
         nombre: "DGS Business Solutions",
         logo: { src: "img/dgs-business-solutions.png", alt: "Logo de DGS Business Solutions" },
-        especialidad: "Income tax (personal, LLC y corporativo), bookkeeping, payroll y apertura de negocio. También traducciones y trámites migratorios con equipo paralegal; los casos que requieren un abogado se refieren a un abogado de inmigración de confianza",
+        especialidad: "Income tax (personal, LLC y corporativo), bookkeeping, payroll y apertura de negocio. También traducciones y trámites migratorios con equipo paralegal; los casos que requieren un abogado se refieren al abogado de inmigración Franklin S. Montero (Clifton, NJ)",
         ciudad: "Fair Lawn y Freehold, NJ",
         idioma: "Español e inglés",
         contactos: [
