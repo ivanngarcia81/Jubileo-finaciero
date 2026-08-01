@@ -1456,6 +1456,14 @@ p { margin-bottom: 1rem; }
   margin-bottom: 1rem;
 }
 
+/* En pantallas donde las tarjetas van lado a lado, reservar un alto parejo
+   para la credencial mantiene alineados los logos/profesionales entre tarjetas. */
+@media (min-width: 640px) {
+  .aliado__credencial {
+    min-height: 4rem;
+  }
+}
+
 .aliado__credencial strong {
   color: var(--carbon);
   font-weight: 600;
@@ -1502,7 +1510,7 @@ p { margin-bottom: 1rem; }
 
 /* Cuerpo de la tarjeta (profesionales o mensaje "en formación") al pie */
 .aliado__cuerpo {
-  margin-top: auto;
+  margin-top: 1.25rem;
 }
 
 .aliado__vacio {
