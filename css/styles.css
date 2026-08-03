@@ -222,6 +222,9 @@ p { margin-bottom: 1rem; }
 
 .logo__icono {
   flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 
 .nav {
@@ -1819,6 +1822,13 @@ p { margin-bottom: 1rem; }
   align-items: center;
   gap: 0.6rem;
   margin-bottom: 0.9rem;
+}
+
+.footer__logo {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
 }
 
 .footer__titulo {
