@@ -778,6 +778,33 @@ p { margin-bottom: 1rem; }
   color: var(--texto) !important;
 }
 
+/* ---------- Testimonios (historias reales) ---------- */
+
+.testimonio {
+  max-width: 760px;
+  margin: 0 auto;
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio);
+  padding: 2.5rem;
+  box-shadow: var(--sombra);
+}
+
+.testimonio__cita {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  line-height: 1.65;
+  color: var(--texto);
+  margin: 0;
+}
+
+.testimonio__autor {
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: var(--teal-oscuro);
+  font-size: 0.95rem;
+}
+
 /* ---------- Botón de WhatsApp ---------- */
 
 .boton--whatsapp {
