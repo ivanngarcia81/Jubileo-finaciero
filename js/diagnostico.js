@@ -1,5 +1,5 @@
 /* Jubileo Financiero — Diagnóstico Financiero en 3 minutos
-   Quiz de 9 preguntas que determina el Baby Step actual del usuario.
+   Quiz de 9 preguntas que determina el paso de bebé actual del usuario.
    Una pregunta a la vez, con barra de progreso y navegación por teclado
    (los radios usan el manejo nativo de foco y flechas del navegador). */
 
@@ -91,7 +91,7 @@
 
   var PASOS = {
     1: {
-      nombre: "Baby Step 1",
+      nombre: "paso de bebé 1",
       titulo: "Ahorra $1,000 de fondo inicial de emergencia",
       descripcion: "Estás en el punto de partida, y eso es una buena noticia: ya sabes dónde estás. Tu primera meta es juntar $1,000 lo más rápido posible. Ese colchón básico evita que cualquier imprevisto — una llanta, una visita al médico — se convierta en deuda nueva.",
       acciones: [
@@ -101,7 +101,7 @@
       ]
     },
     2: {
-      nombre: "Baby Step 2",
+      nombre: "paso de bebé 2",
       titulo: "Paga todas tus deudas con la bola de nieve",
       descripcion: "Ya tienes tu colchón inicial: ahora toca atacar las deudas. En este paso eliminas todas tus deudas de consumo (excepto la hipoteca) con el método bola de nieve: de la más pequeña a la más grande, ganando impulso con cada victoria.",
       acciones: [
@@ -111,7 +111,7 @@
       ]
     },
     3: {
-      nombre: "Baby Step 3",
+      nombre: "paso de bebé 3",
       titulo: "Completa tu fondo de emergencia de 3 a 6 meses",
       descripcion: "¡Estás libre de deudas de consumo! Ahora conviertes tu colchón de $1,000 en un verdadero fondo de emergencia: de 3 a 6 meses de tus gastos. Con eso, un despido o una emergencia médica dejan de ser una catástrofe financiera.",
       acciones: [
@@ -121,7 +121,7 @@
       ]
     },
     4: {
-      nombre: "Baby Step 4",
+      nombre: "paso de bebé 4",
       titulo: "Invierte el 15% de tus ingresos para el retiro",
       descripcion: "Con tu fondo completo, es hora de construir riqueza. La meta es invertir el 15% de tus ingresos brutos para el retiro, de forma constante y aburrida — que es como se construye el patrimonio real.",
       acciones: [
@@ -131,7 +131,7 @@
       ]
     },
     5: {
-      nombre: "Baby Step 5",
+      nombre: "paso de bebé 5",
       titulo: "Ahorra para la universidad de tus hijos",
       descripcion: "Ya inviertes para tu retiro: ahora puedes ahorrar para la educación de tus hijos sin sacrificar tu propio futuro. Recuerda el orden: tu retiro va primero, porque para la universidad hay becas, pero para el retiro no hay préstamos.",
       acciones: [
@@ -141,7 +141,7 @@
       ]
     },
     6: {
-      nombre: "Baby Step 6",
+      nombre: "paso de bebé 6",
       titulo: "Paga tu casa por completo",
       descripcion: "Estás en la recta final: eliminar la hipoteca. Cada pago extra a capital acorta años de deuda. Imagina tu vida sin pago de vivienda — esa es la libertad que estás construyendo.",
       acciones: [
@@ -151,7 +151,7 @@
       ]
     },
     7: {
-      nombre: "Baby Step 7",
+      nombre: "paso de bebé 7",
       titulo: "Construye riqueza y da con generosidad",
       descripcion: "¡Felicidades! Estás en la cima del plan: sin deudas de ningún tipo, con fondo de emergencia e invirtiendo para el futuro. Ahora tu dinero tiene una misión mayor: construir patrimonio y bendecir a otros con generosidad.",
       acciones: [

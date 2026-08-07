@@ -1,8 +1,8 @@
 /* Jubileo Financiero — Planificador de remesas inteligente
    Todos los cálculos ocurren en el navegador; nada se envía a un servidor.
    Rangos sugeridos (% del ingreso neto) según la etapa del plan:
-   - Baby Steps 1–3 (estabilizando): 5% a 10%
-   - Baby Steps 4–7 (construyendo):  10% a 15%
+   - pasos de bebé 1–3 (estabilizando): 5% a 10%
+   - pasos de bebé 4–7 (construyendo):  10% a 15%
    Son puntos de partida para conversar, no reglas rígidas. */
 
 (function () {
@@ -67,8 +67,8 @@
     // Rango sugerido
     document.getElementById("rem-rango").textContent = rangoMin + "% – " + rangoMax + "%";
     var textoRango = estabilizando
-      ? "Mientras construyes tu base (Baby Steps 1 a 3), un rango de " + formatear(montoMin) + " a " + formatear(montoMax) + " mensuales te permite seguir presente con tu familia sin detener tu salida de deudas. Es temporal: cuando tu base esté firme, podrás dar más que nunca."
-      : "Con tu base firme (Baby Step 4 en adelante), un rango de " + formatear(montoMin) + " a " + formatear(montoMax) + " mensuales es sostenible — e incluso puedes planear envíos especiales con propósito: salud, educación o el negocio de la familia.";
+      ? "Mientras construyes tu base (pasos de bebé 1 a 3), un rango de " + formatear(montoMin) + " a " + formatear(montoMax) + " mensuales te permite seguir presente con tu familia sin detener tu salida de deudas. Es temporal: cuando tu base esté firme, podrás dar más que nunca."
+      : "Con tu base firme (paso de bebé 4 en adelante), un rango de " + formatear(montoMin) + " a " + formatear(montoMax) + " mensuales es sostenible — e incluso puedes planear envíos especiales con propósito: salud, educación o el negocio de la familia.";
     document.getElementById("rem-comentario-rango").textContent = textoRango;
 
     // Proyección de un ajuste temporal
@@ -77,7 +77,7 @@
       var liberado = envio - montoMax;
       proyeccion = "Si durante un tiempo ajustaras tu remesa de " + formatear(envio) + " al tope sugerido de " + formatear(montoMax) + ", liberarías " + formatear(liberado) + " cada mes: " + formatear(liberado * 12) + " en un año dirigidos a tu bola de nieve o a tu fondo de emergencia. Ese es el atajo hacia el día en que puedas ayudar sin que te duela el bolsillo — y con más capacidad que hoy.";
     } else if (disponible > 0) {
-      proyeccion = "Tu remesa ya está dentro del rango sugerido. Si diriges con intención los " + formatear(disponible) + " disponibles de cada mes a tu Baby Step actual, en 12 meses habrás avanzado " + formatear(disponible * 12) + " hacia tu libertad financiera — sin reducir ni un peso de lo que envías a casa.";
+      proyeccion = "Tu remesa ya está dentro del rango sugerido. Si diriges con intención los " + formatear(disponible) + " disponibles de cada mes a tu paso de bebé actual, en 12 meses habrás avanzado " + formatear(disponible * 12) + " hacia tu libertad financiera — sin reducir ni un dólar de lo que envías a casa.";
     } else {
       proyeccion = "El primer paso no es recortar la remesa, sino sentarte con todos tus números en un presupuesto base cero. A veces la solución está en otros gastos, en renegociar deudas o en aumentar ingresos. Un plan claro te dirá exactamente dónde.";
     }
